@@ -1,0 +1,62 @@
+<div overlay="Overlay_PG_SQLite_strDataCtrl">
+    <div class="scrollable">
+        <div class="scrollable-content">
+
+            <h4 class="overlay-title">SQLite - strData</h4>
+
+            <p toggle="off" bubble target="Overlay_PG_SQLite_strData">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+            <div class="panel-body">
+
+                <!--for strDaten-->
+                <div class="panel-body">
+                    <button class="btn btn-primary" ng-click="showContentOfTableStrData()">
+                        showContentOfTableStrData
+                    </button>
+                    <button class="btn btn-danger" ng-click="deleteContentOfTableStrData()">
+                        <i class="fa fa-trash-o"></i> deleteContentOfTableStrData
+                    </button>
+
+                    <table style="width:100%">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>id</b>
+                            </td>
+                            <td>
+                                <b>First Name</b>
+                            </td>
+                            <td>
+                                <b>Last Name</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in dataForOverlayStrData">
+                            <td>
+                                {{ row.id }}
+                            </td>
+                            <td>
+                                {{ row.firstName }}
+                            </td>
+                            <td>
+                                {{ row.lastName }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!--<input type="search" ng-model="searchText" class="form-control" placeholder="Search..">-->
+
+            <p toggle="off" bubble target="Overlay_PG_SQLite_strData">
+                <span class="btn btn-primary">close</span>
+            </p>
+        </div>
+    </div>
+</div>

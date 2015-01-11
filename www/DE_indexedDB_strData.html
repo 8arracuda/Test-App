@@ -1,0 +1,75 @@
+<div ng-controller="DE_IndexedDB_strDataCtrl">
+
+    <div class="panel" bs-panel>
+
+        <h2 class="panel-title">
+            database open?
+        </h2>
+
+        <div class="panel-body">
+            <button class="btn" ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+            <button class="btn btn-primary" ng-click="openDatabase()">open database</button>
+        </div>
+
+        <div ng-str-data-dataset-loader></div>
+
+        <h2 class="panel-title">
+            Actions on IndexedDB
+        </h2>
+
+        <div class="panel-body">
+
+            <a ng-class="{disabled: db==null}" class="btn btn-primary" ng-click="saveTableToIndexedDB()">saveTableToIndexedDB</a>
+            <a ng-class="{disabled: db==null}" class="btn btn-primary" ng-click="loadTableFromIndexedDB()">loadTableFromIndexedDB</a>
+            <a ng-class="{disabled: db==null}" class="btn btn-warning"
+               ng-click="clearObjectStore()">clearObjectStore</a>
+
+        </div>
+
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseDestinationTable">
+                    <h4 class="panel-title">
+
+                        <div ng-class="cssVarForDestinationTable">Table loaded from IndexedDB ({{
+                            tableFromIndexedDB.length | number }} addresses)
+                        </div>
+                    </h4>
+                </div>
+
+                <div id="collapseDestinationTable" toggleable active-class="in" default="active"
+                     class="panel-collapse collapse">
+                    <table style="width:100%" ng-show="tableFromIndexedDB.length > 0">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>First Name</b>
+                            </td>
+                            <td>
+                                <b>Last Name</b>
+                            </td>
+                            <td>
+                                <b>...</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in tableFromIndexedDB">
+                            <td>
+                                {{ row[1] }}
+                            </td>
+                            <td>
+                                {{ row[2] }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

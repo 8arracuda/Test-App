@@ -1,0 +1,54 @@
+<div ng-controller="PE_SessionStorage_TestC2Ctrl">
+
+    <div class="panel">
+        <div class="panel-heading">
+            <h2>Performance-Test C2</h2>
+            {{ mainTestDecription }}<br>
+
+            <div ng-show="selectedTestVariant=='TestC2a' || selectedTestVariant=='' ">
+                <button ng-hide="selectedTestVariant!=''"
+                        class="btn btn-primary"
+                        ng-click="selectTestVariant('TestC2a')">
+                    select
+                </button>
+                <b>{{ testName1}}:</b> {{ testDecription1 }}
+            </div>
+            <br>
+
+            <div ng-show="selectedTestVariant=='TestC2b' || selectedTestVariant=='' ">
+                <button ng-hide="selectedTestVariant!=''"
+                        class="btn btn-primary"
+                        ng-click="selectTestVariant('TestC2b')">
+                    select
+                </button>
+                <b>{{ testName2}}:</b> {{ testDecription2 }}
+            </div>
+
+            <button class="btn btn-sm btn-default" ng-show="selectedTestVariant!=''" ng-click="reset()">reset this page</button>
+
+        </div>
+
+        <div ng-show="selectedTestVariant!=''">
+
+            <div ng-prepare-section-for-tests></div>
+
+
+            <h2 class="panel-title">
+                Start test
+            </h2>
+
+            <div class="panel-body">
+
+
+                <div ng-start-performance-test-button-without-database></div>
+
+            </div>
+
+            <div ng-results-for-performance-tests></div>
+
+        </div>
+    </div>
+
+
+
+</div>

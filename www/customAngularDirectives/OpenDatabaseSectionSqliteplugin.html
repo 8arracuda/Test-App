@@ -1,0 +1,9 @@
+<h2 class="panel-title">
+    database connection
+</h2>
+
+<div class="panel-body">
+    <button class="btn"
+            ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+    <button class="btn btn-primary" ng-click="initSQLitePlugin()">init/open database</button>
+</div>

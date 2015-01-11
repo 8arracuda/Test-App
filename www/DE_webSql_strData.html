@@ -1,0 +1,120 @@
+<div ng-controller="DE_WebSql_strDataCtrl">
+
+    <div class="panel" bs-panel>
+
+        <h2 class="panel-title">
+            database connection
+        </h2>
+
+        <div class="panel-body">
+            <button class="disabled btn"
+                    ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+            <button class="btn btn-primary" ng-click="initWebSQL()">init/open database</button>
+        </div>
+
+        <div ng-str-data-dataset-loader></div>
+
+        <h2 class="panel-title">
+            Actions on WebSQL
+        </h2>
+
+        <div class="panel-body">
+            <button ng-class="{disabled: db==null }" class="btn btn-primary" ng-click="saveTable1ToWebSQL()"><i class="fa fa-save"></i>
+                saveTable1ToWebSQL
+            </button>
+        </div>
+
+        <h2 class="panel-title">
+            Actions on WebSQL
+        </h2>
+
+        <div class="panel-body">
+            <a ng-class="{disabled: db==null }" class="btn btn-primary" ng-click="loadTableFromWebSQL()"><i class="fa fa-refresh"></i> update</a>
+            <a ng-class="{disabled: db==null }" class="btn btn-warning" ng-click="clearTable()"><i class="fa fa-trash-o"></i>clear</a>
+        </div>
+
+
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseDestinationTable">
+                    <h4 class="panel-title">
+
+                        <div ng-class="cssVarForDestinationTable">Table loaded from WebSQL ({{
+                            tableFromWebSQL.length | number }} addresses)
+                        </div>
+                    </h4>
+                </div>
+
+                <div id="collapseDestinationTable" toggleable active-class="in" default="active"
+                     class="panel-collapse collapse">
+                    <table style="width:100%" ng-show="tableFromWebSQL.length > 0">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>First Name</b>
+                            </td>
+                            <td>
+                                <b>Last Name</b>
+                            </td>
+                            <td>
+                                <b>...</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in tableFromWebSQL">
+                            <td>
+                                {{ row[1] }}
+                            </td>
+                            <td>
+                                {{ row[2] }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <!--<table style="width:100%">-->
+        <!--<thead>-->
+        <!--<tr>-->
+        <!--<td>-->
+        <!--<b>First Name</b>-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--<b>Last Name</b>-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--<b>...</b>-->
+        <!--</td>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr ng-repeat="row in tableFromWebSQL">-->
+        <!--<td>-->
+        <!--{{ row[0] }}-->
+        <!--</td>-->
+        <!--<td>-->
+        <!--{{ row[1] }}-->
+        <!--</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+        <!--</table>-->
+
+    </div>
+
+
+    <!--<h2 class="panel-title">-->
+    <!--Actions on WebSQL-->
+    <!--</h2>-->
+
+    <!--<div class="panel-body">-->
+    <!--<button class="btn btn-primary" ng-click="saveTable1ToWebSQL()"><i class="fa fa-save"></i> saveTable1ToWebSQL</button>-->
+    <!--</div>-->
+
+
+</div>
+
+</div>

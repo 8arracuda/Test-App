@@ -1,0 +1,154 @@
+<div ng-controller="DE_LocalStorage_strDataCtrl">
+
+    <div class="panel" bs-panel>
+        <!--<div class="panel">-->
+
+        <div ng-str-data-dataset-loader></div>
+
+        <!--<h4 class="panel-title">-->
+        <!--Actions on LocalStorage-->
+        <!--</h4>-->
+        <h4 class="panel-title">
+            method1:
+        </h4>
+
+        <div class="panel-body">
+            Every property (firstName, lastName, ...) is saved as seperate key/value pairs. (prefix:
+            "table1_")<br>
+            <a class="btn btn-primary" ng-click="saveTable1ToLocalStorage()"><i
+                    class="fa fa-save"></i> save</a>
+
+            <a class="btn btn-primary" ng-click="loadTable1FromLocalStorage()"><i
+                    class="fa fa-refresh"></i>
+                load</a>
+
+            <a class="btn btn-danger" ng-click="deleteTable1FromLocalStorage()"><i
+                    class="fa fa-trash-o"></i> delete</a>
+
+        </div>
+
+
+        <h4 class="panel-title">
+            method2:
+        </h4>
+
+        <div class="panel-body">
+
+            Every row data-item (address) is stored in a key-value pair.<br>
+            <a class="btn btn-primary" ng-click="saveTable2ToLocalStorage()"><i
+                    class="fa fa-save"></i> save</a>
+
+            <a class="btn btn-primary" ng-click="loadTable2FromLocalStorage()"><i
+                    class="fa fa-refresh"></i>
+                load</a>
+
+            <a class="btn btn-danger" ng-click="deleteTable2FromLocalStorage()"><i
+                    class="fa fa-trash-o"></i> delete</a>
+
+        </div>
+
+        <h4 class="panel-title">
+            method3:
+        </h4>
+
+        <div class="panel-body">
+
+            The whole table is stored into a key named "table1_JSON"<br>
+            <a class="btn btn-primary" ng-click="saveTable3ToLocalStorage()"><i
+                    class="fa fa-save"></i> save</a>
+
+            <a class="btn btn-primary" ng-click="loadTable3FromLocalStorage()"><i
+                    class="fa fa-refresh"></i>
+                load</a>
+
+            <a class="btn btn-danger" ng-click="deleteTable3FromLocalStorage()"><i
+                    class="fa fa-trash-o"></i> delete</a>
+
+        </div>
+
+        <!--<h4 class="panel-title">-->
+        <!--<!--Table loaded from LocalStorage ({{ tableFromLocalStorage.length | number }} addresses)-->
+
+        <!--<div ng-class="cssVarForDestinationTable">Table loaded from LocalStorage ({{-->
+        <!--tableFromLocalStorage.length | number }} addresses)-->
+        <!--</div>-->
+
+        <!--</h4>-->
+
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseDestinationTable">
+                    <h4 class="panel-title">
+                        <!--source-table [{{ tableOriginal.length | number }} addresses]-->
+                        <!--<div ng-class="cssVarForSourceTable">source-table  [{{ tableOriginal.length | number }} addresses]</div>-->
+                        <!--<div ng-class="cssVarForDestinationTable"><i class="fa fa-eye"></i>Table loaded from LocalStorage ({{-->
+                        <div ng-class="cssVarForDestinationTable">Table loaded from LocalStorage ({{
+                            tableFromLocalStorage.length | number }} addresses)
+                        </div>
+                    </h4>
+                </div>
+
+                <div id="collapseDestinationTable" toggleable active-class="in" default="active"
+                     class="panel-collapse collapse">
+                    <table style="width:100%" ng-show="tableFromLocalStorage.length > 0">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>First Name</b>
+                            </td>
+                            <td>
+                                <b>Last Name</b>
+                            </td>
+                            <td>
+                                <b>...</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in tableFromLocalStorage">
+                            <td>
+                                {{ row[1] }}
+                            </td>
+                            <td>
+                                {{ row[2] }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div overlay="datasetSelectionOverlay">
+            <div class="scrollable">
+                <div class="scrollable-content">
+
+                    <h4 class="overlay-title">Select a dataset</h4>
+
+                    <p toggle="off" bubble target="datasetSelectionOverlay">
+                        <span class="btn btn-primary">close</span>
+                    </p>
+
+                    <div class="list-group">
+                        <div ng-repeat="dataset in datasets">
+
+                            <li class="list-group-item">
+                                <div ng-show="dataset == $parent.selectedDataset">(selected)</div>
+                                <a ng-click="selectAndLoadDataset(dataset)">{{ dataset }}</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <p toggle="off" bubble target="datasetSelectionOverlay">
+                        <span class="btn btn-primary">close</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

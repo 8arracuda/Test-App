@@ -1,0 +1,84 @@
+<div ng-controller="DE_LocalStorage_singleValuesCtrl">
+
+    <div class="panel">
+    <!--<div class="panel" bs-panel>-->
+
+        <h2 class="panel-title">
+            Store a key-value pair with LocalStorage
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToSave"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="valueToSave"
+                    label="Value"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Value"
+                    />
+
+            <button ng-class="{disabled: keyToSave.length==0}" class="btn btn-primary" ng-click="save()"><i class="fa fa-save"></i> save</button>
+
+        </div>
+        <h2 class="panel-title">
+            Check what's saved?
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToLoad"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+
+            "{{ keyLoaded }}" {{ valueLoadedFromLocalStorage }}<br>
+            <button ng-class="{disabled: keyToLoad.length==0}" class="btn btn-primary" ng-click="updateView()"><i class="fa fa-refresh"></i> update
+            </button>
+
+        </div>
+        <h2 class="panel-title">
+            Remove a key
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToRemove"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+            <button class="btn btn-danger" ng-class="{disabled: keyToRemove.length==0}"
+                    ng-click="removeKeyFromLocalStorage()"><i class="fa fa-trash-o"></i> delete key
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,63 @@
+<div content-for="title">
+    <span>PL LocalStorage</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+
+    </div>
+</div>
+
+
+<div class="panel">
+
+    <h2 class="panel-title">
+        Preparation
+    </h2>
+
+    <div class="panel-body">
+        {{ preparationText }}<br>
+        <button class="btn" ng-class="{ 'btn-success' : isPrepared, 'btn-danger' : !isPrepared  }"></button>
+        <button ng-click="prepare()" class="btn btn-primary">prepare</button>
+    </div>
+
+    <h2 class="panel-title">
+        Start test
+    </h2>
+
+    <div class="panel-body">
+
+        <!--<button ng-class="{disabled: !isPrepared }" ng-click="startPerformanceTest()" class="btn btn-primary">-->
+        <!--start {{ selectedTestVariant }}-->
+        <!--</button>-->
+
+        <button class="btn btn-primary" ng-click="startPlatformTest()">start {{ selectedTestVariant }}
+        </button>
+        <br>
+
+    </div>
+
+    <div ng-results-for-platform-tests></div>
+
+</div>
+<!--<div class="panel-body">-->
+
+
+<!--<a class="btn btn-primary" ng-click="testLimit1()">-->
+<!--testLimit1-->
+<!--</a>-->
+<!--<a class="btn btn-primary" ng-click="testLimit2()">-->
+<!--testLimit2-->
+<!--</a>-->
+<!--<a class="btn btn-primary" ng-click="testLimit3()">-->
+<!--testLimit3-->
+<!--</a>-->
+<!--<a class="btn btn-primary" ng-click="testLimit4()">-->
+<!--testLimit4-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+
+
+
+

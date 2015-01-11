@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<!--<html ng-app="sdApp">-->
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+
+    <link rel="stylesheet" href="css/mobile-angular-ui-base.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/overrides.css"/>
+
+
+
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <title>TestApp</title>
+</head>
+<body>
+
+
+<div ng-controller="SidebarController" class="sidebar sidebar-left" toggleable parent-active-class="sidebar-left-in"
+     id="mainSidebar">
+    <!--<h1 class="app-name">Test-App</h1>-->
+    <h1 class="app-name"><a style="color:inherit; text-decoration: none" href="#/overview">T</a>est-App</h1>
+
+    <div class="scrollable">
+        <div class="scrollable-content">
+
+            <div class="btn-group">
+                <a class="btn btn-default btn-plattformTests"
+                   style="width: 100px; height: 45px; padding: 1px 0px 1px 0px"
+                   target="localStorageTab1"
+                   toggle="on"
+                   ng-click="tab = 1"
+                   active-class="active">Plattform-<br>Tests
+                </a>
+
+                <a class="btn btn-default btn-performanceTests"
+                   style="width: 100px; height: 45px; padding: 1px 0px 1px 0px"
+                   target="localStorageTab2"
+                   toggle="on"
+                   ng-click="tab = 2"
+                   active-class="active">Performance-<br>Tests
+                </a>
+
+                <a class="btn btn-default btn-demonstration"
+                   style="width: 100px; height: 45px; padding: 10px 0px 1px 0px"
+                   target="localStorageTab3"
+                   toggle="on"
+                   ng-click="tab = 3"
+                   active-class="active">Demonstration
+                </a>
+            </div>
+
+            <!--TODO: LocalStorageTab unbenennen!-->
+
+            <div class="tab-content">
+
+                <div class="tab-pane"
+                     toggleable
+                     ng-class="{active: tab == 1}"
+                     default="active"
+                     id="localStorageTab1"
+                     exclusion-group="myTabs">
+
+                    <div class="list-group list-group-plattformTests" toggle="off" bubble target="mainSidebar">
+                        <div class="list-group list-group-plattformTests" toggle="off" bubble target="mainSidebar">
+                            <a ng-repeat="t in sidebar_plattformTests" class="list-group-item" href="#/{{t.linkURL}}">{{t.labelText}}
+                                <i class="fa fa-chevron-right pull-right" ng-show="{{t.support}}"></i><i
+                                        class="fa pull-right" ng-hide="{{t.support}}">not supported</i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane"
+                     toggleable
+                     ng-class="{active: tab == 2}"
+                     id="localStorageTab2"
+                     exclusion-group="myTabs">
+
+                    <div class="list-group list-group-performanceTests" toggle="off" bubble
+                         target="mainSidebar">
+                        <div class="list-group list-group-performanceTests" toggle="off" bubble target="mainSidebar">
+                            <a ng-repeat="t in sidebar_performanceTests" class="list-group-item" href="#/{{t.linkURL}}">{{t.labelText}}
+                                <i class="fa fa-chevron-right pull-right" ng-show="{{t.support}}"></i><i
+                                        class="fa pull-right" ng-hide="{{t.support}}">not supported</i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane"
+                     toggleable
+                     ng-class="{active: tab == 3}"
+                     id="localStorageTab3"
+                     exclusion-group="myTabs">
+
+                    <div class="list-group list-group-demonstration" toggle="off" bubble target="mainSidebar">
+                        <a ng-repeat="t in sidebar_demonstration" class="list-group-item" href="#/{{t.linkURL}}">{{t.labelText}}
+                            <i class="fa fa-chevron-right pull-right" ng-show="{{t.support}}"></i><i
+                                    class="fa pull-right" ng-hide="{{t.support}}">not supported</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="app">
+    <div ng-controller="NavbarController" class="navbar navbar-app navbar-absolute-top"
+         ng-class="{'navbar-plattformTests': section=='PL', 'navbar-performanceTests': section=='PE', 'navbar-demonstration': section=='DE'}">
+        <!--<div ng-controller="NavbarController" class="navbar navbar-app navbar-absolute-top">-->
+
+        <div class="navbar-brand navbar-brand-center" yield-to="title">
+            <span>TestApp</span>
+        </div>
+
+        <div class="btn-group pull-left">
+            <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
+                <i class="fa fa-bars"></i> Menu
+            </div>
+        </div>
+
+        <div class="btn-group pull-right" yield-to="navbarAction">
+            <div class="btn btn-navbar">
+                <i class="fa fa-plus"></i> New2
+            </div>
+        </div>
+    </div>
+
+    <div class="app-body">
+        <div ng-view class="app-content"></div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/www/cordova.js"></script>
+
+<script type="text/javascript" src="/www/js/modernizr-latest.js"></script>
+
+<script type="text/javascript" src="/www/js/angularJS_1.3.2/angular.min.js"></script>
+<script type="text/javascript" src="/www/js/angularJS_1.3.2/angular-route.min.js"></script>
+<script type="text/javascript" src="/www/js/angularJS_1.3.2/angular-animate.min.js"></script>
+
+<script type="text/javascript" src="/www/js/mobile-angular-ui.min.js"></script>
+<script type="text/javascript" src="/www/js/jquery-1.11.1.min.js"></script>
+
+<script type="text/javascript" src="/www/js/index.js"></script>
+
+<script type="text/javascript" src="/www/js/custom.js"></script>
+<script type="text/javascript" src="/www/js/customDirectives.js"></script>
+<script type="text/javascript" src="/www/js/routing.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/demo/DE_LocalStorageCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_LocalStorageEinzelwerteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_LocalStorageStrDatenCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_LocalStorageMediendatenCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/demo/DE_SessionStorageCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_SessionStorageEinzelwerteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_SessionStorageStrDatenCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_SessionStorageMediendatenCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/demo/DE_IndexedDBCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_IndexedDBEinzelwerteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_IndexedDBStrDatenCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_IndexedDBMediendatenCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/demo/DE_PG_FileAPICtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_PG_FileAPIEinzelwerteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_PG_FileAPIstrDatenCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_PG_FileAPIMediendatenCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/demo/DE_WebSqlCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_WebSqlEinzelwerteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_WebSqlStrDatenCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_WebSqlMediendatenCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/demo/DE_PGSQLiteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_PGSQLiteEinzelwerteCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_PGSQLiteStrDatenCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/demo/DE_PGSQLiteMediendatenCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/platformTests/PL_LocalStorageCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/platformTests/PL_SessionStorageCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/platformTests/PL_IndexedDBCtrl.js"></script>
+<!--<script type="text/javascript" src="/www/js/controller/platformTests/PL_WebSqlCtrl.js"></script>-->
+
+<script type="text/javascript" src="/www/js/controller/platformTests/PL_WebSqlCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/platformTests/PL_PGSQLiteCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorageCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestC1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestC2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestC3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestR1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestR2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestR3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestU1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_LocalStorage_TestD1Ctrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_SessionStorageCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDBCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestC1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestC2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestC3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestR1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestR2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestR3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_indexedDB_TestU1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_IndexedDB_TestD1Ctrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSqlCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestC1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestC2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestC3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestR1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestR2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestR3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestU1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_WebSql_TestD1Ctrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPICtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestC1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestC2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestC3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestR1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestR2Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestR3Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestU1Ctrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_FileAPI_TestD1Ctrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/performanceTests/PE_PGSQLiteCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/LocalStorageList2DetailCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/OverviewCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/AccCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/CamCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/DevOrientationCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/DirectoryVariablesCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/VidCtrl.js"></script>
+<script type="text/javascript" src="/www/js/controller/LoadImageCtrl.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/techSupportFactory.js"></script>
+<script type="text/javascript" src="/www/js/controller/testDataFactory.js"></script>
+<script type="text/javascript" src="/www/js/controller/PE_ParameterFactory.js"></script>
+<script type="text/javascript" src="/www/js/controller/FileApiDeleteAllFilesFactory.js"></script>
+<script type="text/javascript" src="/www/js/controller/IndexedDBClearObjectStore.js"></script>
+
+<script type="text/javascript" src="/www/js/controller/SidebarController.js"></script>
+<script type="text/javascript" src="/www/js/controller/NavbarController.js"></script>
+
+<!--TODO Am Ende entfernen-->
+<!--weinre-->
+<!--<script src="http://192.168.0.101:8081/target/target-script-min.js"></script>-->
+<!--<script src="http://localhost:8081/target/target-script-min.js"></script>-->
+
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
+</html>

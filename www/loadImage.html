@@ -1,0 +1,36 @@
+<div content-for="title">
+    <span>load Image</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <i class="fa fa-plus"></i>IMG
+    </div>
+</div>
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="alert-info">{{ fooText }}</div>
+
+        <a class="btn btn-primary" ng-click="loadImage_pg()">loadImage PG</a>
+        <a class="btn btn-primary" ng-click="loadImage_web()">loadImage web</a>
+        <a class="btn btn-primary" ng-click="loadText()">loadText</a>
+        <a class="btn btn-primary" ng-click="loadBase64Image()">loadBase64Image</a>
+
+        <img id="imagePlaceholder" alt="image placeholder" src=""/>
+        <img id="imagePlaceholder2" alt="image placeholder2" src=""/>
+
+        <!--fails to load on Android and iOS!-->
+        <img id="imagePlaceholder3" width="100" height="100" alt="image placeholder3" src="/img/logoGoogle.jpg"/>
+
+        <!--ok on Android and iOS!-->
+        <img id="imagePlaceholder4" width="100" height="100" alt="image placeholder4" src="img/logoGoogle.jpg"/>
+
+
+        <video>
+            <source src="res/H264_test1_Talkinghead_mp4_480x360.mp4" type="video/mp4"/>
+        </video>
+
+
+    </div>
+</div>

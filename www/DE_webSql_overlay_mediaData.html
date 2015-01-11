@@ -1,0 +1,64 @@
+<div overlay="Overlay_WebSQL_Mediendata">
+    <div class="scrollable">
+        <div class="scrollable-content">
+
+            <h4 class="overlay-title">WebSQL - Media data</h4>
+
+            <p toggle="off" bubble target="Overlay_WebSQL_Mediendata">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+            <div class="panel-body">
+
+                <!--for mediendaten-->
+                <div class="panel-body">
+                    <button class="btn btn-primary" ng-click="showContentOfTableMediadata()">
+                        showContentOfTableMediendata
+                    </button>
+                    <button class="btn btn-danger" ng-click="deleteContentOfTableMediadata()">
+                        <i class="fa fa-trash-o"></i> deleteContentOfTableMediendata
+                    </button>
+
+                    <table style="width:100%">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>id (todo)</b>
+                            </td>
+                            <td>
+                                <b>First Name (todo)</b>
+                            </td>
+                            <td>
+                                <b>Last Name (todo)</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in dataForOverlayMediadata">
+                            <td>
+                                (todo)
+                                <!--{{ row.id }}-->
+                            </td>
+                            <td>
+                                (todo)
+                                <!--{{ row.firstName }}-->
+                            </td>
+                            <td>
+                                (todo)
+                                <!--{{ row.lastName }}-->
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <p toggle="off" bubble target="Overlay_WebSQL_Mediadata">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+        </div>
+    </div>
+</div>

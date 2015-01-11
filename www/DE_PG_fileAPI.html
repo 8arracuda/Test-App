@@ -1,0 +1,74 @@
+<div content-for="title">
+    <span ng-click="functionForRightButton()">{{ stringForTitle }}</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <a ng-click="functionForRightButton()"><i class="fa fa-database"></i> {{ stringForRightButton }}</a>
+    </div>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="btn-group justified nav-tabs">
+            <a class="btn btn-default"
+               target="PG_FileAPI_einzelwerte"
+               toggle="on"
+               ng-click="enableTab_einzelwerte()"
+               active-class="active">single values
+            </a>
+
+            <a class="btn btn-default"
+               target="PG_FileAPI_strData"
+               toggle="on"
+               ng-click="enableTab_strData()"
+               active-class="active">str. data
+            </a>
+
+            <a class="btn btn-default"
+               target="PG_FileAPI_mediaData"
+               toggle="on"
+               ng-click="enableTab_mediaData()"
+               active-class="active">media data
+            </a>
+
+        </div>
+
+        <div class="tab-content">
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 1}"
+                 default="active"
+                 id="PG_FileAPI_einzelwerte"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"DE_PG_fileAPI_singleValues.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 2}"
+                 id="PG_FileAPI_strData"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"DE_PG_fileAPI_strData.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 3}"
+                 id="PG_FileAPI_mediaData"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"DE_PG_fileAPI_mediaData.html"'></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div ng-include src="'DE_PG_fileAPI_overlay.html'"></div>

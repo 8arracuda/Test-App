@@ -1,0 +1,120 @@
+<div content-for="title">
+    <span>{{ stringForTitle }}</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <i class="fa fa-plus" ng-click="foo()"></i><a ng-click="foo()">{{ stringForRightButton }}</a>
+    </div>
+</div>
+
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="panel">
+            <h2 class="panel-title">
+                What does your browser support?</h2>
+
+            <div class="panel-body">
+
+                <!--<div class="list-group">-->
+                <!--<div ng-repeat="(key, value) in techniques">-->
+                <!--<li class="list-group-item">-->
+                <!--{{ key.name }} {{ value.name }}-->
+                <!--</li>-->
+                <!--</div>-->
+                <!--</div>-->
+
+
+                <!--<div class="list-group" ng-repeat="t in techniques">-->
+
+                <!--<li class="list-group-item" ng-class="{'list-group-item-success': t.support}">-->
+                <!--{{ t.name }}-->
+                <!--</li>-->
+
+                <div class="list-group">
+
+                    <li ng-class="{'list-group-item-success':techniques.localStorage, 'list-group-item-danger':!techniques.localStorage}"
+                        class="list-group-item">
+                        LocalStorage
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.sessionStorage, 'list-group-item-danger':!techniques.sessionStorage}"
+                        class="list-group-item">
+                        SessionStorage
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.webSQL, 'list-group-item-danger':!techniques.webSQL}"
+                        class="list-group-item">
+                        WebSQL
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.indexedDB, 'list-group-item-danger':!techniques.indexedDB}"
+                        class="list-group-item">
+                        IndexedDB
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.sqlitePlugin, 'list-group-item-danger':!techniques.sqlitePlugin}"
+                        class="list-group-item">
+                        SQLite Plugin
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.fileAPI_fullSupport, 'list-group-item-danger':!techniques.fileAPI_fullSupport}"
+                        class="list-group-item">
+                        File API (full support)
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.blob, 'list-group-item-danger':!techniques.blob}"
+                        class="list-group-item">
+                        Blob
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.fileReader, 'list-group-item-danger':!techniques.fileReader}"
+                        class="list-group-item">
+                        FileReader
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.file, 'list-group-item-danger':!techniques.file}"
+                        class="list-group-item">
+                        File
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.fileList, 'list-group-item-danger':!techniques.fileList}"
+                        class="list-group-item">
+                        Filelist
+                    </li>
+
+
+                    <li ng-class="{'list-group-item-success':techniques.fileWriter, 'list-group-item-danger':!techniques.fileWriter}"
+                        class="list-group-item">
+                        FileWriter
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.webkitRequestFileSystem, 'list-group-item-danger':!techniques.webkitRequestFileSystem}"
+                        class="list-group-item">
+                        webkitRequestFileSystem
+                    </li>
+
+                    <li ng-class="{'list-group-item-success':techniques.requestFileSystem, 'list-group-item-danger':!techniques.requestFileSystem}"
+                        class="list-group-item">
+                        requestFileSystem
+                    </li>
+
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn btn-primary" ng-click="fillWithZeroes(3)">test(3)</button>
+
+
+        <button class="btn btn-primary" ng-click="fillWithZeroes(4)">test(4)</button>
+        <button class="btn btn-primary" ng-click="generate()">generate</button>
+
+        <button class="btn btn-primary" ng-click="generateRandomNumbersArray()">generate randomNumbers</button>
+
+        <button class="btn btn-primary" ng-click="getTime()">getTime</button>
+    </div>
+</div>
+

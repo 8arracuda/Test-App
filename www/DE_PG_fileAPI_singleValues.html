@@ -1,0 +1,99 @@
+<div ng-controller="DE_PG_FileAPI_singleValuesCtrl">
+
+    <div class="panel">
+
+        <h2 class="panel-title">
+            test
+        </h2>
+        <div class="panel-body">
+
+        <a ng-click="InitTemporaryFs()" class="btn btn-primary">InitTemp Fs</a>
+        <a ng-click="InitPersistentFs()" class="btn btn-primary">InitPers Fs</a>
+        <a ng-click="createFile()" class="btn btn-primary">Create File</a>
+        <a ng-click="requestQuota()" class="btn btn-primary">requestQuota</a>
+        <a ng-click="readFile()" class="btn btn-primary">readFile</a>
+        </div>
+
+        <h2 class="panel-title">
+            store values
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToSave"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="valueToSave"
+                    label="Value"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Value"
+                    />
+            <button class="btn btn-primary" ng-click="save()"><i class="fa fa-save"></i> save</button>
+        </div>
+
+        <h2 class="panel-title">
+            Check what's saved?
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToLoad"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+
+            <table>
+                <tr ng-repeat="value in valuesLoadedFromIndexedDB">
+                    <td>
+                        {{ value }}
+                    </td>
+                </tr>
+            </table>
+            <!--{{ stringForEinzelwerteView }}<br>-->
+            "{{ keyLoaded }}" {{ valueLoadedFromPGFileAPI }}<br>
+            <button class="btn btn-primary" ng-click="updateView()"><i class="fa fa-refresh"></i> update
+            </button>
+
+        </div>
+        <h2 class="panel-title">
+            Remove a key
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToRemove"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+            <button class="btn btn-danger" ng-click="removeKeyFromFileAPI()"><i class="fa fa-trash-o"></i> delete key
+            </button>
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div ng-controller="DE_PG_FileAPI_mediaDataCtrl">
+
+    <div class="panel">
+
+        <h2 class="panel-heading">
+            Images
+        </h2>
+
+        <div ng-mediadata-image-selector></div>
+
+        <h2 class="panel-heading">
+            Canvas (Temp)
+        </h2>
+
+        <div class="panel-body">
+            <canvas id="myCanvas"></canvas>
+            <br>
+            <a ng-click="loadImageToCanvas()" class="btn btn-primary"><i class="fa fa-save"></i>load image to canvas</a>
+        </div>
+
+        <h2 class="panel-title">
+            Actions
+        </h2>
+
+        <div class="panel-body">
+
+            <a ng-click="saveImageToPGFileAPI()" class="btn btn-primary"><i class="fa fa-save"></i> save image</a>
+            <a ng-click="deleteImageFromPGFileAPI()" class="btn btn-danger"><i class="fa fa-trash-o"></i> delete
+                image</a>
+
+        </div>
+        <h2 class="panel-title">
+            Image loaded from PG FileAPI:
+        </h2>
+
+        <div class="panel-body">
+            <img id="imagePlaceholder">
+            <a class="btn btn-default" ng-click="loadImageFromPGFileAPI()"><i class="fa fa-refresh"></i> update</a>
+
+            <!--<a ng-click="loadImageFromPGFileAPI()" class="btn btn-primary">load image from LS</a>-->
+
+        </div>
+        <h2 class="panel-title">
+            Show the string that represents the image
+        </h2>
+
+        <div class="panel-body">
+            <a ng-click="showImageInPGFileAPI()" class="btn btn-primary">load Image</a>
+        </div>
+
+    </div>
+    </div>

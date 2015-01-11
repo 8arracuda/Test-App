@@ -1,0 +1,105 @@
+<div ng-controller="DE_IndexedDB_singleValuesCtrl">
+
+    <div class="panel">
+
+        <h2 class="panel-title">
+            database open?
+        </h2>
+
+        <div class="panel-body">
+            <button class="btn" ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+
+            <button class="btn btn-primary" ng-click="openDatabase()">open database</button>
+
+        </div>
+
+        <h2 class="panel-title">
+            store values
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToSave"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="valueToSave"
+                    label="Value"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Value"
+                    />
+            <button ng-class="{disabled: (db==null || keyToSave.length==0) }" class="btn btn-primary" ng-click="save()"><i class="fa fa-save"></i> save</button>
+        </div>
+
+        <h2 class="panel-title">
+            Check what's saved?
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToLoad"
+                    label="Key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+
+            "{{ keyLoaded }}" {{ valueLoadedFromIndexedDB }}
+
+            <button ng-class="{disabled: (db==null || keyToLoad.length==0)}" class="btn btn-primary" ng-click="updateView()"><i class="fa fa-refresh"></i> update
+            </button>
+
+        </div>
+        <h2 class="panel-title">
+            Remove a key
+        </h2>
+
+        <div class="panel-body">
+
+            <input
+                    bs-form-control
+
+                    type="text"
+                    ng-model="keyToRemove"
+                    label="key"
+                    label-class="col-xs-3 col-sm-2 col-lg-1"
+                    class="col-xs-9 col-sm-10 col-lg-11"
+                    placeholder="Key"
+                    />
+            <button ng-class="{disabled: (db==null || keyToRemove.length==0)}" class="btn btn-danger" ng-click="removeKeyFromObjectStore()"><i class="fa fa-trash-o"></i> delete
+                key
+            </button>
+            <button ng-class="{disabled: db==null}" class="btn btn-warning" ng-click="clearObjectStore()">clearObjectStore</button>
+        </div>
+
+        <h2 class="panel-title">
+            Object Stores
+        </h2>
+
+        <div class="panel-body">
+            <button ng-class="{disabled: db==null}" class="btn btn-default" ng-click="listObjectStores()">listObjectStores</button>
+            <ul>
+                <li ng-repeat="objectStore in objectStores">
+                    {{ objectStore }}
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

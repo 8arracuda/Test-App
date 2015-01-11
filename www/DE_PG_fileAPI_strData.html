@@ -1,0 +1,130 @@
+<div ng-controller="DE_PG_FileAPI_strDataCtrl">
+
+    <div class="panel" bs-panel>
+        <!--<div class="panel">-->
+
+        <div ng-str-data-dataset-loader></div>
+
+        <h4 class="panel-title">
+            method1:
+        </h4>
+
+        <div class="panel-body">
+            Every property (firstName, lastName, ...) is saved in a separate file. (prefix:
+            "table1_")<br>
+            <a class="btn btn-primary" ng-click="saveTable1ToPGFileAPI()"><i
+                    class="fa fa-save"></i> save</a>
+
+            <a class="btn btn-primary" ng-click="loadTable1FromPGFileAPI()"><i
+                    class="fa fa-refresh"></i>
+                load</a>
+
+            <a class="btn btn-danger" ng-click="deleteTable1FromPGFileAPI()"><i
+                    class="fa fa-trash-o"></i> delete</a>
+        </div>
+
+        <h4 class="panel-title">
+            method2:
+        </h4>
+
+        <div class="panel-body">
+
+            The whole table is stored into a key named "table1_JSON"<br>
+            <a class="btn btn-primary" ng-click="saveTable2ToPGFileAPI()"><i
+                    class="fa fa-save"></i> save</a>
+
+            <a class="btn btn-primary" ng-click="loadTable2FromPGFileAPI()"><i
+                    class="fa fa-refresh"></i>
+                load</a>
+
+            <a class="btn btn-danger" ng-click="deleteTable2FromPGFileAPI()"><i
+                    class="fa fa-trash-o"></i> delete</a>
+
+        </div>
+
+        <!--<h4 class="panel-title">-->
+        <!--<!--Table loaded from LocalStorage ({{ tableFromLocalStorage.length | number }} addresses)-->
+
+        <!--<div ng-class="cssVarForDestinationTable">Table loaded from LocalStorage ({{-->
+        <!--tableFromLocalStorage.length | number }} addresses)-->
+        <!--</div>-->
+
+        <!--</h4>-->
+
+        <div class="panel-group" id="accordion">
+
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseDestinationTable">
+                    <h4 class="panel-title">
+                        <!--source-table [{{ tableOriginal.length | number }} addresses]-->
+                        <!--<div ng-class="cssVarForSourceTable">source-table  [{{ tableOriginal.length | number }} addresses]</div>-->
+                        <!--<div ng-class="cssVarForDestinationTable"><i class="fa fa-eye"></i>Table loaded from LocalStorage ({{-->
+                        <div ng-class="cssVarForDestinationTable">Table loaded from FileAPI (PhoneGap Plugin) ({{
+                            tableFromPGFileAPI.length | number }} addresses)
+                        </div>
+                    </h4>
+                </div>
+
+                <div id="collapseDestinationTable" toggleable active-class="in" default="active"
+                     class="panel-collapse collapse">
+                    <table style="width:100%" ng-show="tableFromPGFileAPI.length > 0">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>First Name</b>
+                            </td>
+                            <td>
+                                <b>Last Name</b>
+                            </td>
+                            <td>
+                                <b>...</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in tableFromPGFileAPI track by $index">
+                            <td>
+                                {{ row[1] }}
+                            </td>
+                            <td>
+                                {{ row[2] }}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+        <div overlay="datasetSelectionOverlay">
+            <div class="scrollable">
+                <div class="scrollable-content">
+
+                    <h4 class="overlay-title">Select a dataset</h4>
+
+                    <p toggle="off" bubble target="datasetSelectionOverlay">
+                        <span class="btn btn-primary">close</span>
+                    </p>
+
+                    <div class="list-group">
+                        <div ng-repeat="dataset in datasets">
+
+                            <li class="list-group-item">
+                                <div ng-show="dataset == $parent.selectedDataset">(selected)</div>
+                                <a ng-click="selectAndLoadDataset(dataset)">{{ dataset }}</a>
+                            </li>
+
+                        </div>
+                    </div>
+
+                    <p toggle="off" bubble target="datasetSelectionOverlay">
+                        <span class="btn btn-primary">close</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

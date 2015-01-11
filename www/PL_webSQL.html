@@ -1,0 +1,50 @@
+<div content-for="title">
+    <span>PL WebSQL</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+
+    </div>
+</div>
+
+
+<div class="panel">
+
+    <h2 class="panel-title">
+        database connection
+    </h2>
+
+    <div class="panel-body">
+        <button class="btn"
+                ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+        <button class="btn btn-primary" ng-click="initWebSQL()">init/open database</button>
+    </div>
+
+    <h2 class="panel-title">
+        Preparation
+    </h2>
+
+    <div class="panel-body">
+        {{ preparationText }}<br>
+        <button class="btn" ng-class="{ 'btn-success' : isPrepared, 'btn-danger' : !isPrepared  }"></button>
+        <button ng-click="prepare()" class="btn btn-primary">prepare</button>
+    </div>
+
+
+    <h2 class="panel-title">
+        Start test
+    </h2>
+
+    <div class="panel-body">
+
+        <button class="btn btn-primary" ng-click="startPlatformTest()">start {{ selectedTestVariant }}
+        </button>
+        <br>
+        currentIteration {{ currentIteration | number }}
+
+    </div>
+
+    <div ng-results-for-platform-tests></div>
+
+</div>

@@ -1,0 +1,35 @@
+
+
+    <div content-for="title">
+        <span>Camera</span>
+    </div>
+
+    <div content-for="navbarAction">
+        <div class="btn btn-navbar">
+            <i class="fa fa-plus"></i>CAM
+        </div>
+    </div>
+
+    <div ng-show="!camera">
+        no camera available!
+    </div>
+
+    <div ng-show="camera">
+
+        <a class="btn btn-primary" ng-click="startCamera()">start camera</a>
+        <a class="btn btn-warning" ng-click="stopCamera()">stop camera</a>
+
+        <img id="myImage">
+    </div>
+
+
+    <h2>capure image</h2><br>
+    <input type="file" accept="image/*" capture><br>
+
+    <h2>capure video</h2><br>
+    <input type="file" accept="video/*" capture><br>
+
+    <h2>capure audio</h2><br>
+    <input type="file" accept="audio/*" capture><br>
+
+

@@ -1,0 +1,500 @@
+    6  cordova build ios
+    7  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+    8  cordova build ios
+    9  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   10  cordova build ios
+   11  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   12  cordova build ios
+   13  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   14  cordova build ios
+   15  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   16  cordova build ios
+   17  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   18  cordova build ios
+   19  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   20  cordova build ios
+   21  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   22  cordova build ios
+   23  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   24  cordova build ios
+   25  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   26  cordova build ios
+   27  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   28  cordova build ios
+   29  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   30  cordova build ios
+   31  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   32  cordova build ios
+   33  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   34  cordova build ios
+   35  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   36  cordova build ios
+   37  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   38  cordova build ios
+   39  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   40  cordova build ios
+   41  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   42  cordova build ios
+   43  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   44  cordova build ios
+   45  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   46  cordova build ios
+   47  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   48  cordova build ios
+   49  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   50  cordova build ios
+   51  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   52  cordova build ios
+   53  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   54  cordova build ios
+   55  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   56  cordova build ios
+   57  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   58  cordova build ios
+   59  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   60  cordova build ios
+   61  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   62  cordova build ios
+   63  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   64  cordova build ios
+   65  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   66  cordova build ios
+   67  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   68  cordova build ios
+   69  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   70  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   71  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   72  cordova build ios
+   73  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   74  cordova build ios
+   75  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   76  cordova build ios
+   77  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   78  cordova build ios
+   79  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   80  cordova build ios
+   81  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   82  cordova build ios
+   83  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   84  cordova build ios
+   85  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   86  cordova build ios
+   87  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   88  cordova build ios
+   89  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   90  cordova build ios
+   91  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   92  cordova build ios
+   93  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   94  cordova build ios
+   95  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   96  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+   97  PG
+   98  cd ...
+   99  cd ..
+  100  cd TestApp/
+  101  cd TestApp/
+  102  cordova build ios
+  103  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  104  cordova build ios
+  105  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  106  cordova build ios
+  107  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  108  cordova build ios
+  109  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  110  cordova build ios
+  111  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  112  cordova build ios
+  113  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  114  cordova build ios
+  115  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  116  cordova build ios
+  117  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  118  cordova build ios
+  119  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  120  cordova build ios
+  121  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  122  PG
+  123  cd ..
+  124  cd TestApp/
+  125  cordova build ios
+  126  cordova build ios
+  127  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  128  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  129  cordova build ios
+  130  sudo npm install -g weinre
+  131  ifconfig -all
+  132  ifconfig
+  133  weinre -httpPort 8081 --boundHost -all- -debug -true
+  134  cordova build ios
+  135  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  136  cordova build ios
+  137  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  138  cordova build ios
+  139  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  140  cordova build ios
+  141  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  142  cordova build ios
+  143  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  144  cordova build ios
+  145  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  146  cordova build ios
+  147  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  148  cordova build ios
+  149  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  150  cordova build ios
+  151  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  152  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  153  cordova build ios
+  154  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  155  cordova build ios
+  156  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  157  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  158  cordova build ios
+  159  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  160  cordova build ios
+  161  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  162  cordova run android
+  163  cordova run android
+  164  cordova run android
+  165  cordova build ios
+  166  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  167  cordova build android
+  168  cordova run android
+  169  cordova build ios
+  170  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  171  cordova run android
+  172  ifconfig
+  173  PG
+  174  cd ..
+  175  cd TestApp/
+  176  cordova build ios
+  177  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  178  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  179  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  180  cordova build ios
+  181  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  182  cordova build ios
+  183  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  184  cordova build ios
+  185  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  186  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  187  cordova build ios
+  188  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  189  cordova build ios
+  190  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  191  cordova build ios
+  192  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  193  cordova build ios
+  194  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  195  cordova build ios
+  196  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  197  cordova build ios
+  198  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  199  cordova run android
+  200  cordova build ios
+  201  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  202  cordova build ios
+  203  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  204  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  205  cordova build ios
+  206  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  207  cordova build ios
+  208  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  209  cordova build ios
+  210  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  211  cordova build ios
+  212  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  213  cordova build ios
+  214  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  215  cordova build ios
+  216  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  217  cordova build ios
+  218  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  219  cordova build ios
+  220  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  221  cordova build ios
+  222  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  223  cordova build ios
+  224  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  225  cordova build ios
+  226  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  227  cordova build ios
+  228  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  229  cordova build ios
+  230  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  231  cordova build ios
+  232  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  233  cordova build ios
+  234  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  235  cordova build ios
+  236  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  237  cordova build ios
+  238  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  239  cordova build ios
+  240  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  241  cordova build ios
+  242  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  243  cordova build ios
+  244  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  245  cordova build ios
+  246  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  247  cordova build ios
+  248  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  249  cordova build ios
+  250  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  251  cordova build ios
+  252  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  253  cordova build ios
+  254  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  255  cordova build ios
+  256  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  257  cordova build ios
+  258  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  259  cordova build ios
+  260  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  261  cordova build ios
+  262  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  263  cordova build ios
+  264  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  265  cordova build ios
+  266  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  267  cordova build ios
+  268  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  269  cordova build ios
+  270  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  271  cordova build ios
+  272  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  273  cordova build ios
+  274  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  275  cordova build ios
+  276  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  277  cordova build ios
+  278  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  279  cordova build ios
+  280  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  281  cordova build ios
+  282  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  283  cordova build ios
+  284  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  285  cordova build ios
+  286  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  287  cordova build ios
+  288  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  289  cordova build ios
+  290  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  291  cordova build ios
+  292  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  293  cordova build ios
+  294  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  295  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  296  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  297  cordova build ios
+  298  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  299  cordova build ios
+  300  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  301  cordova build ios
+  302  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  303  cordova build ios
+  304  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  305  cordova build ios
+  306  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  307  cordova build ios
+  308  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  309  cordova build ios
+  310  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  311  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  312  cordova build ios
+  313  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  314  cordova build ios
+  315  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  316  cordova build ios
+  317  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  318  cordova build ios
+  319  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  320  cordova build ios
+  321  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  322  cordova build ios
+  323  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  324  cordova build ios
+  325  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  326  cordova build ios
+  327  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  328  cordova build ios
+  329  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  330  cordova build ios
+  331  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  332  cordova build ios
+  333  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  334  cordova build ios
+  335  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  336  cordova build ios
+  337  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  338  cordova build ios
+  339  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  340  cordova build ios
+  341  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  342  cordova build ios
+  343  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  344  cordova build ios
+  345  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  346  cordova build ios
+  347  cordova build ios
+  348  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  349  cordova build ios
+  350  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  351  cordova build ios
+  352  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  353  cordova build ios
+  354  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  355  cordova build ios
+  356  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  357  cordova build ios
+  358  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  359  cordova build ios
+  360  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  361  cordova build ios
+  362  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  363  cordova build ios
+  364  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  365  cordova build ios
+  366  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  367  cordova build ios
+  368  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  369  cordova build ios
+  370  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  371  cordova build ios
+  372  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  373  cordova run android
+  374  cordova build ios
+  375  cordova build ios
+  376  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  377  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  378  cordova run android
+  379  cordova run android
+  380  cordova build ios
+  381  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  382  cordova build ios
+  383  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  384  cordova build ios
+  385  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  386  cordova build ios
+  387  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  388  cordova build ios
+  389  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  390  cordova build ios
+  391  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  392  cordova build ios
+  393  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  394  cordova build ios
+  395  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  396  cordova run android
+  397  cordova run android
+  398  cordova run android
+  399  cordova run android
+  400  cordova build ios
+  401  cordova run android
+  402  cordova build ios
+  403  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  404  cordova build ios
+  405  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  406  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  407  cordova build ios
+  408  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  409  cordova build ios
+  410  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  411  cordova build ios
+  412  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  413  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  414  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  415  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  416  cordova build ios
+  417  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  418  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  419  cordova run android
+  420  cordova build ios
+  421  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  422  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  423  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  424  cordova build ios
+  425  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  426  cordova run android
+  427  cordova run android
+  428  cordova run android
+  429  cordova run android
+  430  cordova run android
+  431  PG
+  432  cd ..
+  433  cd TestApp
+  434  cd platform
+  435  cd platforms/
+  436  ls
+  437  git rm --cached ios
+  438  git rm --cached ios -r
+  439  git rm --cached android -r
+  440  git rm --cached browser -r
+  441  PG
+  442  cd ..
+  443  cd TestApp
+  444  cordova plugin add org.apache.cordova.device
+  445  cordova build ios
+  446  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  447  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  448  cordova build ios
+  449  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  450  history > hist.txt
+  451  weinre -httpPort 8081 --boundHost -all- -debug -true
+  452  weinre -httpPort 8081 --boundHost -all- -debug -true
+  453  weinre -httpPort 8081 --boundHost -all- -debug -true
+  454  PG
+  455  cd ..
+  456  cd TestApp
+  457  cordova plugin add org.apache.cordova.device
+  458  cordova plugin add org.apache.cordova.device
+  459  weinre -httpPort 8081 --boundHost -all- -debug -true
+  460  weinre -h-boundHost -all- -httpPort 8081 -debug -true
+  461  weinre -h--boundHost -all- -httpPort 8081 -debug -true
+  462  weinre -h--boundHost -all- -httpPort 8081 -debug -true
+  463  sudo npm install -g weinre
+  464  weinre -boundHost -all- -httpPort 8081 -debug -true
+  465  PG
+  466  cd ..
+  467  cd TestApp
+  468  cordova build ios
+  469  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  470  cordova build ios
+  471  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  472  cordova run android
+  473  cordova build ios
+  474  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  475  cordova build ios
+  476  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  477  cordova build ios
+  478  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  479  cordova build ios
+  480  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  481  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  482  cordova build ios
+  483  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  484  cordova run android
+  485  weinre -httpPort 8081 --boundHost -all- -debug -true
+  486  ifconfig
+  487  weinre -httpPort 8081 --boundHost -all- -debug -true
+  488  cordova build ios
+  489  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  490  cordova build ios
+  491  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  492  cordova build ios
+  493  cordova build ios
+  494  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  495  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  496  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  497  cordova run android
+  498  PG
+  499  cd ..
+  500  cd TestApp
+  501  cordova run android
+  502  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  503  cordova build ios
+  504  ios-sim launch ./platforms/ios/build/emulator/Test-App.app  --stderr ./platforms/ios/cordova/console.log  --stdout ./platforms/ios/cordova/console.log  --devicetypeid "com.apple.CoreSimulator.SimDeviceType.iPhone-5s, 8.1" --exit
+  505  history > hist2.txt

@@ -1,0 +1,48 @@
+<!--<h2 class="panel-title">-->
+    <!--Results-->
+<!--</h2>-->
+
+<!--<div class="panel-body">-->
+
+    <!--<div class="list-group">-->
+
+        <!--<li ng-show="prepareInProgress==true" class="list-group-item list-group-item-warning">-->
+            <!--preparing <i class="fa fa-spinner fa-spin"></i>-->
+        <!--</li>-->
+        <!--<li ng-show="testInProgress==true" class="list-group-item list-group-item-warning">-->
+            <!--Test in progress <i class="fa fa-spinner fa-spin"></i>-->
+        <!--</li>-->
+
+        <!--<li ng-hide="!result" class="list-group-item-success">-->
+            <!--{{ result.descripion }} occured in iteration {{ result.exceptionInIteration}}-->
+        <!--</li>-->
+
+    <!--</div>-->
+
+<!--</div>-->
+
+<h2 class="panel-title">
+    Results
+</h2>
+
+<div class="panel-body">
+
+    <br>
+
+    <div class="list-group">
+
+        <li ng-show="testInProgress==true" class="list-group-item list-group-item-warning">
+            Test in progress <i class="fa fa-spinner fa-spin"></i> current iteration: {{ currentIteration | number }}
+        </li>
+
+            <li ng-hide="!result" ng-class="{'list-group-item-success': result!=-1}" class="list-group-item">
+
+                quota reached in iteration {{ result.exceptionInIteration}}<br>
+                {{ result.descripion }}
+
+                <!--{{ result.descripion }} occured in iteration {{ result.exceptionInIteration}}-->
+            </li>
+
+    </div>
+
+</div>

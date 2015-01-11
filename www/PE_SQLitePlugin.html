@@ -1,0 +1,158 @@
+<div content-for="title">
+    <span ng-click="functionForRightButton()">{{ stringForTitle }}</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <a ng-click="functionForRightButton()"> {{ stringForRightButton }}</a>
+    </div>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="btn-group justified nav-tabs">
+            <a class="btn btn-default"
+               target="SQLitePlugin_C1"
+               toggle="on"
+               ng-click="enableTab_1()"
+               active-class="active">C1
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_C2"
+               toggle="on"
+               ng-click="enableTab_2()"
+               active-class="active">C2
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_C3"
+               toggle="on"
+               ng-click="enableTab_3()"
+               active-class="active">C3
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_R1"
+               toggle="on"
+               ng-click="enableTab_4()"
+               active-class="active">R1
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_R2"
+               toggle="on"
+               ng-click="enableTab_5()"
+               active-class="active">R2
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_R3"
+               toggle="on"
+               ng-click="enableTab_6()"
+               active-class="active">R3
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_U1"
+               toggle="on"
+               ng-click="enableTab_7()"
+               active-class="active">U1
+            </a>
+
+            <a class="btn btn-default"
+               target="SQLitePlugin_D1"
+               toggle="on"
+               ng-click="enableTab_8()"
+               active-class="active">D1
+            </a>
+
+        </div>
+
+        <div class="tab-content">
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 1}"
+                 default="active"
+                 id="SQLitePlugin_C1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testC1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 2}"
+                 id="SQLitePlugin_C2"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testC2.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 3}"
+                 id="SQLitePlugin_C3"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testC3.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 4}"
+                 id="SQLitePlugin_R1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testR1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 5}"
+                 id="SQLitePlugin_R2"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testR2.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 6}"
+                 id="SQLitePlugin_R3"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testR3.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 7}"
+                 id="SQLitePlugin_U1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testU1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 8}"
+                 id="SQLitePlugin_D1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_SQLitePlugin_testD1.html"'></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

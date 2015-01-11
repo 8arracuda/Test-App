@@ -1,0 +1,151 @@
+/*.sourceTableWasUpdated-add, .sourceTableWasUpdated-remove {*/
+    /*-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+    /*-moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+    /*-o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+    /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+/*}*/
+
+
+.nav-tabs>.btn {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.sourceTableWasUpdated,
+.sourceTableWasUpdated-add.sourceTableWasUpdated-remove {
+    color: red;
+    /*font-size:3em;*/
+}
+
+/*.sourceTableWasUpdated-remove.sourceTableWasUpdated-remove-active {*/
+    /*font-size:1.0em;*/
+    /*color:black;*/
+/*}*/
+
+/*.destinationTableWasUpdated-add, .destinationTableWasUpdated-remove {*/
+    /*-webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+    /*-moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+    /*-o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+    /*transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;*/
+/*}*/
+
+.destinationTableWasUpdated,
+.destinationTableWasUpdated-add.destinationTableWasUpdated-remove {
+    color: red;
+    /*font-size:3em;*/
+}
+
+/*.destinationTableWasUpdated-remove.destinationTableWasUpdated-remove-active {*/
+    /*font-size:1.0em;*/
+    /*color:black;*/
+/*}*/
+
+
+
+
+
+
+
+a.list-group-item.ng-binding.ng-scope.active {
+    border-color:  #ffffff;
+}
+
+.overlay {
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.list-group-item {
+    overflow-x: hidden;
+
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+
+}
+
+/*.list-group {*/
+    /*padding-bottom: 30px;*/
+/*}*/
+
+.btn {
+    padding: 12px;
+}
+.scrollable-content {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.list-group-plattformTests > a.list-group-item  {
+    background-color: #B7EDFF;
+}
+
+.list-group-plattformTests > a.list-group-item.active  {
+    background-color: #61C4FF;
+}
+
+.list-group-performanceTests > a.list-group-item  {
+    background-color: #FF9689;
+}
+
+.list-group-performanceTests > a.list-group-item.active  {
+    background-color: #FF7159;
+}
+
+.list-group-demonstration > a.list-group-item  {
+    background-color: #9ed878;
+}
+
+.list-group-demonstration > a.list-group-item.active  {
+    background-color: #75B244;
+}
+
+#mainSidebar > div > div > div.btn-group > a.btn.btn-default.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#mainSidebar > div > div > div.btn-group > a.btn.btn-default.btn-plattformTests.active, a.btn.btn-default.btn-plattformTests {
+    background-color: #B7EDFF;
+    border-width:  0px;
+}
+
+#mainSidebar > div > div > div.btn-group > a.btn.btn-default.btn-performanceTests.active, a.btn.btn-default.btn-performanceTests {
+    background-color: #FF9689;
+    border-width:  0px;
+}
+
+#mainSidebar > div > div > div.btn-group > a.btn.btn-default.btn-demonstration.active, a.btn.btn-default.btn-demonstration {
+    background-color: #9ed878;
+    border-width:  0px;
+}
+
+body > div.app.has-navbar-top > div.navbar.navbar-app.navbar-absolute-top.navbar-plattformTests {
+    background-color: #B7EDFF;
+}
+
+body > div.app.has-navbar-top > div.navbar.navbar-app.navbar-absolute-top.navbar-performanceTests {
+    background-color: #FF9689;
+}
+
+body > div.app.has-navbar-top > div.navbar.navbar-app.navbar-absolute-top.navbar-demonstration {
+    background-color: #9ed878;
+}
+
+
+
+
+
+/*https://stackoverflow.com/questions/3058866/how-to-force-a-line-break-in-a-loooooong-word-in-a-div*/

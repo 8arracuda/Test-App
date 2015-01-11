@@ -1,0 +1,70 @@
+<!--<div ng-controller="MediendatenVideoSelectorCtrl">-->
+
+<!--<h2 class="panel-title">-->
+<!--Select an video-->
+<!--</h2>-->
+
+<!--<div class="panel-body">-->
+
+<!--<a class="btn btn-primary" ng-click="video_prev()"><-</a>-->
+<!--<img src="{{ images[currentVideo] }}">-->
+<!--<a class="btn btn-primary" ng-click="video_next()">-></a><br>-->
+<!--</div>-->
+
+<!--</div>-->
+
+
+<!--<h2 class="panel-title">-->
+<!--Select an video ({{ currentVideo }})-->
+<!--</h2>-->
+
+<!--<div class="panel-body">-->
+
+<!--<a class="btn btn-primary" ng-click="video_prev()"><-</a>-->
+
+
+<!--<video ng-src="{{ videos[currentVideo] }}" width="320" height="240" loop muted controls>-->
+<!--<img src="/res/red_circle.jpg" alt="Video not available or not supported">-->
+<!--</video>-->
+<!--<a class="btn btn-primary" ng-click="video_next()">-></a><br>-->
+
+<!--</div>-->
+
+
+<!--<div ng-controller="MediendatenVideoSelectorCtrl">-->
+
+<!--<h2 class="panel-title">-->
+<!--Select an video-->
+<!--</h2>-->
+
+<!--<div class="panel-body">-->
+
+<!--<a class="btn btn-primary" ng-click="video_prev()"><-</a>-->
+<!--<video ng-src="{{ videos[currentVideo] }}" width="320" height="240" loop muted controls>&ndash;&gt;-->
+<!--<img src="/res/red_circle.jpg" alt="Video not available or not supported">-->
+<!--</video>-->
+<!--<a class="btn btn-primary" ng-click="video_next()">-></a><br>-->
+<!--</div>-->
+
+<!--</div>-->
+
+
+<div ng-controller="MediadataVideoSelectorCtrl">
+
+    <h2 class="panel-title">
+        Select an video ({{ currentVideo }})
+    </h2>
+
+    <div class="panel-body">
+
+        <a class="btn btn-primary" ng-click="video_prev()"><-</a>
+
+
+        <video ng-src="{{ videos[currentVideo] }}" width="320" height="240" loop muted controls>
+            <img src="/res/red_circle.jpg" alt="Video not available or not supported">
+        </video>
+        <a class="btn btn-primary" ng-click="video_next()">-></a><br>
+
+    </div>
+
+</div>

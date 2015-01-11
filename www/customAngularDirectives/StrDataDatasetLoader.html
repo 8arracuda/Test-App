@@ -1,0 +1,103 @@
+<div ng-controller="strDataDatasetLoaderCtrl">
+
+    <div class="panel">
+
+        <h4 class="panel-title">
+            dataset:
+        </h4>
+
+        <div class="panel-body">
+            {{ selectedDataset }} [{{ data.length | number }} addresses]<br>
+            <a class="btn btn-sm btn-default" ng-click="openDatasetSelectionOverlay()">change dataset</a><br>
+
+        </div>
+        <h4 class="panel-title">
+            amount of addresses:
+        </h4>
+
+        <div class="panel-body">
+            <a ng-click="decreaseNumberOfRowsBy(10)" class="btn btn-default">-10</a>
+            <a ng-click="decreaseNumberOfRowsBy(1)" class="btn btn-default">-1</a>
+            <b>{{ numberOfRows }}</b>
+            <a ng-click="increaseNumberOfRowsBy(1)" class="btn btn-default">+1</a>
+            <a ng-click="increaseNumberOfRowsBy(10)" class="btn btn-default">+10</a>
+
+            <a ng-click="createTable()" class="btn btn-primary">update source-table</a>
+
+        </div>
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseSourceTable">
+                    <h4 class="panel-title">
+                        <div ng-class="cssVarForSourceTable">
+                            source-table [{{ tableOriginal.length | number }} addresses]
+                        </div>
+                    </h4>
+                </div>
+                <div id="collapseSourceTable" toggleable active-class="in" default="active"
+                     class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <table style="width:100%">
+                            <thead>
+                            <tr>
+                                <td>
+                                    <b>First Name</b>
+                                </td>
+                                <td>
+                                    <b>Last Name</b>
+                                </td>
+                                <td>
+                                    <b>...</b>
+                                </td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="row in tableOriginal">
+                                <td>
+                                    {{ row[1] }}
+                                </td>
+                                <td>
+                                    {{ row[2] }}
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div overlay="datasetSelectionOverlay">
+        <div class="scrollable">
+            <div class="scrollable-content">
+
+                <h4 class="overlay-title">Select a dataset</h4>
+
+                <p toggle="off" bubble target="datasetSelectionOverlay">
+                    <span class="btn btn-primary">close</span>
+                </p>
+
+                <div class="list-group">
+                    <div ng-repeat="dataset in datasets">
+
+                        <li class="list-group-item">
+                            <div ng-show="dataset == $parent.selectedDataset">(selected)</div>
+                            <a ng-click="selectAndLoadDataset(dataset)">{{ dataset }}</a>
+                        </li>
+
+                    </div>
+                </div>
+
+                <p toggle="off" bubble target="datasetSelectionOverlay">
+                    <span class="btn btn-primary">close</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,158 @@
+<div content-for="title">
+    <span ng-click="functionForRightButton()">{{ stringForTitle }}</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <a ng-click="functionForRightButton()"> {{ stringForRightButton }}</a>
+    </div>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="btn-group justified nav-tabs">
+            <a class="btn btn-default"
+               target="IndexedDB_C1"
+               toggle="on"
+               ng-click="enableTab_1()"
+               active-class="active">C1
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_C2"
+               toggle="on"
+               ng-click="enableTab_2()"
+               active-class="active">C2
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_C3"
+               toggle="on"
+               ng-click="enableTab_3()"
+               active-class="active">C3
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_R1"
+               toggle="on"
+               ng-click="enableTab_4()"
+               active-class="active">R1
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_R2"
+               toggle="on"
+               ng-click="enableTab_5()"
+               active-class="active">R2
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_R3"
+               toggle="on"
+               ng-click="enableTab_6()"
+               active-class="active">R3
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_U1"
+               toggle="on"
+               ng-click="enableTab_7()"
+               active-class="active">U1
+            </a>
+
+            <a class="btn btn-default"
+               target="IndexedDB_D1"
+               toggle="on"
+               ng-click="enableTab_8()"
+               active-class="active">D1
+            </a>
+
+        </div>
+
+        <div class="tab-content">
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 1}"
+                 default="active"
+                 id="IndexedDB_C1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testC1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 2}"
+                 id="IndexedDB_C2"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testC2.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 3}"
+                 id="IndexedDB_C3"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testC3.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 4}"
+                 id="IndexedDB_R1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testR1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 5}"
+                 id="IndexedDB_R2"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testR2.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 6}"
+                 id="IndexedDB_R3"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testR3.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 7}"
+                 id="IndexedDB_U1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testU1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 8}"
+                 id="IndexedDB_D1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_indexedDB_testD1.html"'></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

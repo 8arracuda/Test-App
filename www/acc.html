@@ -1,0 +1,30 @@
+<div content-for="title">
+    <span>Accelerometer</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <i class="fa fa-plus"></i>ACC
+    </div>
+</div>
+
+
+<div ng-show="!accelerometer">
+    no accelerometer!
+</div>
+<div ng-show="accelerometer">
+
+    <h2>X: {{ AccX }}</h2><br>
+
+    <h2>Y: {{ AccY }}</h2><br>
+
+    <h2>Z: {{ AccZ }}</h2><br>
+
+    <a class="btn btn-primary" ng-click="startUpdating()" ng-show="refreshIntervalId == -1">start Updating</a>
+    <a class="btn btn-warning" ng-click="stopUpdating()" ng-show="refreshIntervalId != -1">stop Updating</a>
+    <a class="btn btn-warning" ng-click="callManually()">call it manually</a>
+    <br>
+    {{ refreshIntervalId }}
+</div>
+
+

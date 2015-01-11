@@ -1,0 +1,42 @@
+<div overlay="myOverlay">
+    <div class="scrollable">
+        <div class="scrollable-content">
+
+            <h4 class="overlay-title">PG File API- saved files (click to see the value)</h4>
+
+            <p toggle="off" bubble target="myOverlay">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+            <a class="btn btn-primary" ng-click="reloadFileList()">reloadFileList</a>
+            <a class="btn btn-primary" ng-click="deleteAllFiles()">deleteAllFiles</a>
+
+
+            <div ng-show="loadingInProgress==true">
+                list is loading...<br>
+                </div>
+            <div ng-hide="loadingInProgress==true" class="list-group">
+                <div ng-repeat="file in filelist">
+
+                    <li class="list-group-item">
+                        <a ng-click="deleteOneFile(file.name, true)"><i class="fa fa-trash-o pull-right"></i></a>
+
+                        <b ng-click="visible = !visible; loadFileContent($index)">{{ file.name }}</b><br>
+
+                        <div ng-show="visible">{{ file.value }}</div>
+                    </li>
+
+                </div>
+            </div>
+            </div>
+
+            {{ filelist.length | number }} files in this directory.<br>
+            documentsDirectory: {{ documentsDirectory }}
+
+            <p toggle="off" bubble target="myOverlay">
+                <span class="btn btn-primary">close</span>
+            </p>
+        </div>
+    </div>
+
+</div>

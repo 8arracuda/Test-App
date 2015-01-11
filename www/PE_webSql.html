@@ -1,0 +1,160 @@
+<div content-for="title">
+    <span ng-click="functionForRightButton()">{{ stringForTitle }}</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <a ng-click="functionForRightButton()"> {{ stringForRightButton }}</a>
+    </div>
+</div>
+
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="btn-group justified nav-tabs">
+            <a class="btn btn-default"
+               target="webSQL_C1"
+               toggle="on"
+               ng-click="enableTab_1()"
+               active-class="active">C1
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_C2"
+               toggle="on"
+               ng-click="enableTab_2()"
+               active-class="active">C2
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_C3"
+               toggle="on"
+               ng-click="enableTab_3()"
+               active-class="active">C3
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_R1"
+               toggle="on"
+               ng-click="enableTab_4()"
+               active-class="active">R1
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_R2"
+               toggle="on"
+               ng-click="enableTab_5()"
+               active-class="active">R2
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_R3"
+               toggle="on"
+               ng-click="enableTab_6()"
+               active-class="active">R3
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_U1"
+               toggle="on"
+               ng-click="enableTab_7()"
+               active-class="active">U1
+            </a>
+
+            <a class="btn btn-default"
+               target="webSQL_D1"
+               toggle="on"
+               ng-click="enableTab_8()"
+               active-class="active">D1
+            </a>
+
+        </div>
+
+
+        <div class="tab-content">
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 1}"
+                 default="active"
+                 id="webSQL_C1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testC1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 2}"
+                 id="webSQL_C2"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testC2.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 3}"
+                 id="webSQL_C3"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testC3.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 4}"
+                 id="webSQL_R1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testR1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 5}"
+                 id="webSQL_R2"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testR2.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 6}"
+                 id="webSQL_R3"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testR3.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 7}"
+                 id="webSQL_U1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testU1.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 8}"
+                 id="webSQL_D1"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"PE_webSql_testD1.html"'></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

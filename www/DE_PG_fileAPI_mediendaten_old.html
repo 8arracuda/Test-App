@@ -1,0 +1,95 @@
+<div ng-controller="DE_PG_FileAPIMediendatenCtrl">
+
+    <div class="panel">
+        <!--<div class="panel" bs-panel>-->
+
+        <h2 class="panel-heading">
+            Images
+        </h2>
+
+        <div ng-mediendaten-image-selector></div>
+
+        <h2 class="panel-heading">
+            Canvas (Temp)
+        </h2>
+
+        <div class="panel-body">
+            <canvas id="myCanvas"></canvas>
+            <br>
+            <a ng-click="loadImageToCanvas()" class="btn btn-primary"><i class="fa fa-save"></i>load image to canvas</a>
+        </div>
+
+        <h2 class="panel-title">
+            Actions
+        </h2>
+
+        <div class="panel-body">
+
+            <a ng-click="saveImageToPGFileAPI()" class="btn btn-primary"><i class="fa fa-save"></i> save image</a>
+            <a ng-click="deleteImageFromPGFileAPI()" class="btn btn-danger"><i class="fa fa-trash-o"></i> delete
+                image</a>
+
+        </div>
+        <h2 class="panel-title">
+            Image loaded from PG FileAPI:
+        </h2>
+
+        <div class="panel-body">
+            <img id="imagePlaceholder">
+            <a class="btn btn-default" ng-click="loadImageFromPGFileAPI()"><i class="fa fa-refresh"></i> update</a>
+
+            <!--<a ng-click="loadImageFromPGFileAPI()" class="btn btn-primary">load image from LS</a>-->
+
+
+        </div>
+        <h2 class="panel-title">
+            Show the string that represents the image
+        </h2>
+
+        <div class="panel-body">
+            <a ng-click="showImageInPGFileAPI()" class="btn btn-primary">load Image</a>
+        </div>
+
+
+        <!--<h2 class="panel-heading">-->
+        <!--Videos-->
+        <!--</h2>-->
+        <!--&lt;!&ndash;<div class="panel" bs-panel>&ndash;&gt;-->
+
+        <!--<div ng-mediendaten-video-selector></div>-->
+
+        <!--<h2 class="panel-title">-->
+        <!--Actions-->
+        <!--</h2>-->
+
+        <!--<div class="panel-body">-->
+
+        <!--<a ng-click="saveVideoToLocalStorage()" class="btn btn-primary"><i class="fa fa-save"></i>save video to-->
+        <!--LS</a>-->
+        <!--<a ng-click="deleteVideoFromLocalStorage()" class="btn btn-danger"><i class="fa fa-trash-o"></i> delete from-->
+        <!--LS</a>-->
+
+        <!--</div>-->
+        <!--<h2 class="panel-title">-->
+        <!--Video loaded from LocalStorage:-->
+        <!--</h2>-->
+
+        <!--<div class="panel-body">-->
+        <!--<video width="320" height="240" controls muted>-->
+        <!--<source id="videoPlaceholder" type="video/mp4">-->
+        <!--</video>-->
+        <!--<a class="btn btn-default" ng-click="loadVideoFromLocalStorage()"><i class="fa fa-refresh"></i> update</a>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<h2 class="panel-title">-->
+        <!--Show the string that represents the video-->
+        <!--</h2>-->
+
+        <!--<div class="panel-body">-->
+
+        <!--<a ng-click="showVideoInLocalStorage()" class="btn btn-primary">show Video in LS</a>-->
+
+        <!--</div>-->
+
+    </div>

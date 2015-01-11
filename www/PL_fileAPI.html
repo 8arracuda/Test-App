@@ -1,0 +1,86 @@
+<div content-for="title">
+    <span>PL File API</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+
+    </div>
+</div>
+
+<div class="panel">
+    <!--<div class="panel-heading">-->
+        <!--<h2>Plattform-Test Limit</h2>-->
+        <!--{{ mainTestDecription }}<br>-->
+
+        <!--<div ng-show="selectedTestVariant=='TestLimit1' || selectedTestVariant=='' ">-->
+            <!--<button ng-hide="selectedTestVariant!=''"-->
+                    <!--class="btn btn-primary"-->
+                    <!--ng-click="selectTestVariant('TestLimit1')">-->
+                <!--select-->
+            <!--</button>-->
+            <!--<b>{{ testName1}}:</b> {{ testDecription1 }}-->
+        <!--</div>-->
+        <!--<br>-->
+
+        <!--<div ng-show="selectedTestVariant=='TestLimitB' || selectedTestVariant=='' ">-->
+            <!--<button ng-hide="selectedTestVariant!=''"-->
+                    <!--class="btn btn-primary"-->
+                    <!--ng-click="selectTestVariant('TestLimitB')">-->
+                <!--select-->
+            <!--</button>-->
+            <!--<b>{{ testName2}}:</b> {{ testDecription2 }}-->
+        <!--</div>-->
+        <!--<br>-->
+
+        <!--<div ng-show="selectedTestVariant=='TestLimitC' || selectedTestVariant=='' ">-->
+            <!--<button ng-hide="selectedTestVariant!=''"-->
+                    <!--class="btn btn-primary"-->
+                    <!--ng-click="selectTestVariant('TestLimitC')">-->
+                <!--select-->
+            <!--</button>-->
+            <!--<b>{{ testName3}}:</b> {{ testDecription3 }}-->
+        <!--</div>-->
+        <!--<br>-->
+
+        <!--<div ng-show="selectedTestVariant=='TestLimitD' || selectedTestVariant=='' ">-->
+            <!--<button ng-hide="selectedTestVariant!=''"-->
+                    <!--class="btn btn-primary"-->
+                    <!--ng-click="selectTestVariant('TestLimitD')">-->
+                <!--select-->
+            <!--</button>-->
+            <!--<b>{{ testName4}}:</b> {{ testDecription4 }}-->
+        <!--</div>-->
+
+        <!--<button class="btn btn-sm btn-default" ng-show="selectedTestVariant!=''" ng-click="reset()">reset this page-->
+        <!--</button>-->
+
+    <!--</div>-->
+
+    <h2 class="panel-title">
+        Start test
+    </h2>
+
+    <div class="panel-body">
+
+        <div ng-prepare-section-for-tests></div>
+
+    </div>
+
+    <h2 class="panel-title">
+        Start test
+    </h2>
+
+    <div class="panel-body">
+        <button class="btn btn-primary" ng-click="startPlatformTest()">start {{ selectedTestVariant }}
+        </button>
+        <br>
+        currentIteration {{ currentIteration | number }}
+
+    </div>
+
+    <div ng-results-for-platform-tests></div>
+
+</div>
+
+

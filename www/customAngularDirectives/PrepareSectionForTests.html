@@ -1,0 +1,8 @@
+<h2 class="panel-title">
+    Preparation
+</h2>
+<div class="panel-body">
+    {{ preparationText }}<br>
+    <button class="btn" ng-class="{ 'btn-success' : isPrepared, 'btn-danger' : !isPrepared  }"></button>
+    <button ng-class="{disabled: testInProgress || prepareInProgress }" ng-click="prepare()" class="btn btn-primary">prepare</button>
+</div>

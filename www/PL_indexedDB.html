@@ -1,0 +1,36 @@
+<div content-for="title">
+    <span>PL Indexed DB</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+
+    </div>
+</div>
+
+
+<div class="panel">
+
+    <div ng-open-database-section></div>
+
+    <h2 class="panel-title">
+        Start test
+    </h2>
+
+    <div class="panel-body">
+
+        <!--<button ng-class="{disabled: !isPrepared }" ng-click="startPerformanceTest()" class="btn btn-primary">-->
+        <!--start {{ selectedTestVariant }}-->
+        <!--</button>-->
+        <div ng-prepare-section-for-tests></div>
+        <button class="btn btn-primary" ng-click="startPlatformTest()">start {{ selectedTestVariant }}
+        </button>
+
+        <br>
+        currentIteration {{ currentIteration | number }}
+
+    </div>
+
+    <div ng-results-for-platform-tests></div>
+
+</div>

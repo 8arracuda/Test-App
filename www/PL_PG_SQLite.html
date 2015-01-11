@@ -1,0 +1,70 @@
+<div content-for="title">
+    <span>PL SQLite Plugin</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+
+    </div>
+</div>
+
+
+<div class="panel">
+
+    <h2 class="panel-title">
+        database connection
+    </h2>
+
+    <div class="panel-body">
+        <button class="btn"
+                ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+        <button class="btn btn-primary" ng-click="initSQLitePlugin()">init/open database</button>
+    </div>
+
+    <h2 class="panel-title">
+        Preparation
+    </h2>
+
+    <div class="panel-body">
+        {{ preparationText }}<br>
+        <button class="btn" ng-class="{ 'btn-success' : isPrepared, 'btn-danger' : !isPrepared  }"></button>
+        <button ng-click="prepare()" class="btn btn-primary">prepare</button>
+    </div>
+
+
+    <h2 class="panel-title">
+        Start test
+    </h2>
+
+    <div class="panel-body">
+
+        <!--<button ng-class="{disabled: !isPrepared }" ng-click="startPerformanceTest()" class="btn btn-primary">-->
+        <!--start {{ selectedTestVariant }}-->
+        <!--</button>-->
+
+        <button class="btn btn-primary" ng-click="startPlatformTest()">start {{ selectedTestVariant }}
+        </button>
+        <br>
+        currentIteration {{ currentIteration | number }}
+
+    </div>
+
+    <h2 class="panel-title">
+        Results
+    </h2>
+
+    <div class="panel-body">
+
+        <div class="list-group">
+            <div ng-repeat="result in results track by $index">
+
+                <li ng-class="{'list-group-item-success': result!=-1}" class="list-group-item">
+                    {{ result }}
+                </li>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>

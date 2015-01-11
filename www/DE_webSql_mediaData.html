@@ -1,0 +1,37 @@
+<div ng-controller="DE_WebSql_mediaDataCtrl">
+
+    <div class="panel">
+
+        <h2 class="panel-title">
+            database connection
+        </h2>
+
+        <div class="panel-body">
+            <button class="disabled btn"
+                    ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+            <button class="btn btn-primary" ng-click="initWebSQL()">init/open database</button>
+        </div>
+
+        <div ng-mediadata-image-selector></div>
+
+        <h2 class="panel-title">
+            Actions
+        </h2>
+
+        <div class="panel-body">
+
+        </div>
+
+    </div>
+
+
+    <div ng-mediendata-video-selector></div>
+
+    <h2 class="panel-title">
+        Actions
+    </h2>
+
+    <div class="panel-body">
+
+    </div>
+</div>

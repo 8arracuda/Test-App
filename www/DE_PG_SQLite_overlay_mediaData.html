@@ -1,0 +1,67 @@
+<div overlay="Overlay_PG_SQLite_medienDataCtrl">
+    <div class="scrollable">
+        <div class="scrollable-content">
+
+            <h4 class="overlay-title">SQLite - Media data</h4>
+
+            <p toggle="off" bubble target="Overlay_PG_SQLite_Mediendaten">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+            <div class="panel-body">
+
+
+                <!--for mediendaten-->
+                <div class="panel-body">
+                    <button class="btn btn-primary" ng-click="showContentOfTableMediadata()">
+                        showContentOfTableMediendaten
+                    </button>
+                    <button class="btn btn-danger" ng-click="deleteContentOfTableMediadata()">
+                        <i class="fa fa-trash-o"></i> deleteContentOfTableMediendaten
+                    </button>
+
+                    <table style="width:100%">
+                        <thead>
+                        <tr>
+                            <td>
+                                <b>id (todo)</b>
+                            </td>
+                            <td>
+                                <b>First Name (todo)</b>
+                            </td>
+                            <td>
+                                <b>Last Name (todo)</b>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="row in dataForOverlayMediendaten">
+                            <td>
+                                (todo)
+                                <!--{{ row.id }}-->
+                            </td>
+                            <td>
+                                (todo)
+                                <!--{{ row.firstName }}-->
+                            </td>
+                            <td>
+                                (todo)
+                                <!--{{ row.lastName }}-->
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <!--<input type="search" ng-model="searchText" class="form-control" placeholder="Search..">-->
+
+            <p toggle="off" bubble target="Overlay_PG_SQLite_Mediendaten">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+        </div>
+    </div>
+</div>

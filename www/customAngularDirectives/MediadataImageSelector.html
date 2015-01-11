@@ -1,0 +1,14 @@
+<div ng-controller="MediadataImageSelectorCtrl">
+
+    <h2 class="panel-title">
+        Select an image
+    </h2>
+
+    <div class="panel-body">
+
+        <a class="btn btn-primary" ng-click="image_prev()"><-</a>
+        <img id="sourceImage" src="{{ images[currentImage] }}">
+        <a class="btn btn-primary" ng-click="image_next()">-></a><br>
+    </div>
+
+</div>

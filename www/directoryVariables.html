@@ -1,0 +1,30 @@
+<div content-for="title">
+    <span>directory variables</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <i class="fa fa-plus"></i>DirVar
+    </div>
+</div>
+
+
+<div class="alert alert-warning" ng-show="!directoryVars" role="alert">no directoryVars availabe.</div>
+
+<div class="scrollable" ng-show="directoryVars">
+    <div class="scrollable-content">
+
+        <div class="list-group">
+            <div ng-repeat="(key, value) in directoryVars">
+                <li class="list-group-item">
+                    <b>{{ key }}</b>:<br>
+                </li>
+                <li class="list-group-item">
+                    {{ value }}
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+

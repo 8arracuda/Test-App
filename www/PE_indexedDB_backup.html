@@ -1,0 +1,60 @@
+<div content-for="title">
+    <span>PE Indexed DB</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <i class="fa fa-plus"></i>IDB
+    </div>
+</div>
+
+<div class="panel">
+
+    <h2 class="panel-title">
+        database open?
+    </h2>
+
+    <div class="panel-body">
+        <button class="btn" ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
+
+        <button class="btn btn-primary" ng-click="openDatabase()">open database</button>
+
+    </div>
+
+    <h2 class="panel-title">
+        actions
+    </h2>
+
+    <div class="panel-body">
+
+        <button class="btn btn-primary" ng-click="  perf_store1000Items()">  perf_store1000Items</button>
+        <button ng-click="startPerformanceTest()" class="btn btn-primary">start Performance-Test</button>
+        <button ng-click="startPerformanceTest_save_onlyOne()" class="btn btn-primary">startPerformanceTest_save_onlyOne</button>
+        <button ng-click="startPerformanceTest_remove_onlyOne()" class="btn btn-primary">startPerformanceTest_remove_onlyOne</button>
+        <button ng-click="clearObjectStore()" class="btn btn-primary">clearObjectStore</button>
+
+    </div>
+
+    <h2 class="panel-title">
+        Results
+    </h2>
+
+    <div class="panel-body">
+
+        {{ stringWithResults }}<br>
+
+        <br>
+
+        <div class="list-group">
+            <div ng-repeat="result in results track by $index">
+
+                <li ng-class="{'list-group-item-success': result!=-1}" class="list-group-item">
+                    {{ result }}
+                </li>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

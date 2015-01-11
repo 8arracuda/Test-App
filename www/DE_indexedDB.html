@@ -1,0 +1,83 @@
+<div content-for="title">
+    <span>{{ stringForTitle }}</span>
+</div>
+
+<!--<div content-for="navbarAction">-->
+    <!--<div class="btn btn-navbar">-->
+        <!--<i class="fa fa-plus"></i>{{ stringForRightButton }}-->
+        <!--&lt;!&ndash;<a ng-click="functionForRightButton()"><i class="fa fa-plus"></i>{{ stringForRightButton }}</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;<a ng-click="testFunction()"><i class="fa fa-plus"></i>{{ stringForRightButton }}</a>&ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <a ng-click="functionForRightButton()"><i class="fa fa-database"></i> {{ stringForRightButton }}</a>
+    </div>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+        <div class="btn-group justified nav-tabs">
+            <a class="btn btn-default"
+               target="indexedDB_singleValues"
+               toggle="on"
+               ng-click="enableTab_singleValues()"
+               active-class="active">single values
+            </a>
+
+            <a class="btn btn-default"
+               target="indexedDB_strData"
+               toggle="on"
+               ng-click="enableTab_strData()"
+               active-class="active">str. data
+            </a>
+
+            <a class="btn btn-default"
+               target="indexedDB_mediaData"
+               toggle="on"
+               ng-click="enableTab_mediaData()"
+               active-class="active">media data
+            </a>
+
+        </div>
+
+
+        <div class="tab-content">
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 1}"
+                 default="active"
+                 id="indexedDB_singleValues"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"DE_indexedDB_singleValues.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 2}"
+                 id="indexedDB_strData"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"DE_indexedDB_strData.html"'></div>
+
+            </div>
+
+            <div class="tab-pane"
+                 toggleable
+                 ng-class="{active: tab == 3}"
+                 id="indexedDB_mediaData"
+                 exclusion-group="myTabs">
+
+                <div ng-include src='"DE_indexedDB_mediaData.html"'></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div ng-include src="'DE_indexedDB_overlay.html'"></div>

@@ -1,0 +1,35 @@
+<div overlay="myOverlay">
+    <div class="scrollable">
+        <div class="scrollable-content">
+
+            <h4 class="overlay-title">SessionStorage - saved keys (click to see the value)</h4>
+
+            <p toggle="off" bubble target="myOverlay">
+                <span class="btn btn-primary">close</span>
+            </p>
+
+            <!--<input type="search" ng-model="searchText" class="form-control" placeholder="Search..">-->
+
+            <div class="list-group">
+                <div ng-repeat="(key,value) in sessionStorage">
+
+                    <li class="list-group-item">
+                        <a ng-click="deleteItem(key)"><i class="fa fa-trash-o pull-right"></i></a>
+                        <b ng-click="visible = !visible">{{ key }}</b><br>
+
+                        <div ng-show="visible">{{ value }}</div>
+                    </li>
+
+                </div>
+            </div>
+
+            <p toggle="off" bubble target="myOverlay">
+                <span class="btn btn-primary">close</span>
+            </p>
+        </div>
+    </div>
+
+    SessionStorage has {{ sessionStorage.length }} items.<br>
+    SessionStorage has {{ $parent.sessionStorage.length }} items.<br>
+
+</div>

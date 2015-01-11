@@ -1,0 +1,45 @@
+<div content-for="title">
+    <span>Indexed DB</span>
+</div>
+
+<div content-for="navbarAction">
+    <div class="btn btn-navbar">
+        <i class="fa fa-plus"></i>IDB
+    </div>
+</div>
+
+<div class="scrollable">
+    <div class="scrollable-content">
+
+
+        <a class="btn btn-primary" ng-click="openDatabase()">open Database</a>
+        <a class="btn btn-primary" ng-click="saveDatabase()">save Database</a>
+        <a class="btn btn-primary" ng-click="showList()">showList</a>
+        <a class="btn btn-primary" ng-click="showObjectStores()">showObjectStores</a>
+
+
+        <div class="list-group">
+            <li class="list-group-item">
+                <b>ObjectStores:</b>
+            </li>
+
+            <div ng-repeat="(key, value) in objectStoreNames">
+                <li class="list-group-item">
+                    {{ key }} - {{ value }}
+                </li>
+            </div>
+            <li class="list-group-item">
+                <b>Data:</b>
+            </li>
+
+            <div ng-repeat="(key, value) in customers">
+                <li class="list-group-item">
+                    {{ key }} - {{ value }}
+                </li>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
