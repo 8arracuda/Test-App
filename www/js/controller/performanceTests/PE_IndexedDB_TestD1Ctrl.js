@@ -154,16 +154,12 @@ sdApp.controller('PE_IndexedDB_TestD1Ctrl', function ($scope, $rootScope, testDa
         var objectStore = transaction.objectStore(objStoreName);
 
         for (var i = 0; i < amountOfData; i++) {
-
             objectStore.delete(i);
-
         }
 
         transaction.oncomplete = function (event) {
             var timeEnd = new Date().getTime();
-
             var timeDiff = timeEnd - timeStart;
-
             $scope.results.push({iteration:  iteration,  time: timeDiff});
             iteration++;
             $scope.testInProgress = false;

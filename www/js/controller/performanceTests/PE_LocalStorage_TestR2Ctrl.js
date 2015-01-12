@@ -22,7 +22,6 @@ sdApp.controller('PE_LocalStorage_TestR2Ctrl', function ($scope, $rootScope, tes
     $scope.testDecription2 = 'Stores ' + amountOfData_testR2b + ' items';
 
 
-
     $scope.selectTestVariant = function (testVariant) {
         $scope.selectedTestVariant = testVariant;
 
@@ -114,13 +113,19 @@ sdApp.controller('PE_LocalStorage_TestR2Ctrl', function ($scope, $rootScope, tes
     }
 
     $scope.prepare = function () {
-
-        clearLocalStorage();
-        loadDataForPreparation();
-        saveAddressData();
-        $scope.isPrepared = true;
-        console.log('prepare function finished');
+        $scope.prepareInProgress = true;
         $scope.$apply();
+        setTimeout(function() {
+            clearLocalStorage();
+            loadDataForPreparation();
+            saveAddressData();
+            $scope.prepareInProgress = false;
+            $scope.isPrepared = true;
+            console.log('prepare function finished');
+            $scope.$apply();
+        }, 1000);
+
+
 
     };
 

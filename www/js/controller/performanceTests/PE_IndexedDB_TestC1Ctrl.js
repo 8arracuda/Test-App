@@ -102,7 +102,6 @@ sdApp.controller('PE_IndexedDB_TestC1Ctrl', function ($scope, $rootScope, testDa
         }
     };
 
-
     $scope.prepare = function () {
         $scope.prepareInProgress = true;
         $scope.$apply();

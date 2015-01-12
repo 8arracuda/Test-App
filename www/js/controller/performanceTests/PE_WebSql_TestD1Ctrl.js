@@ -63,38 +63,33 @@ sdApp.controller('PE_WebSql_TestD1Ctrl', function ($scope, $rootScope, testDataF
         console.log('initWebSQL start');
         $scope.db = window.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
         $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
-        //TODO rename all CreateTableEinzelwerte / CreateTableMediendaten method names to createTable!
         console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
     $scope.createTable = function (tx) {
         console.log('createTable start');
-
         //Define the structure of the database
         tx.executeSql('CREATE TABLE IF NOT EXISTS ' + tableName + '(id TEXT PRIMARY KEY, address TEXT)');
         console.log('createTable executed');
     };
 
     $scope.errorHandlerWebSQL = function (e) {
-        console.log('errorHandlerWebSQL start');
-        alert(e.message);
         console.log(e.message);
-        console.log('errorHandlerWebSQL executed');
     };
 
     function saveAddressData(callback) {
+
         $scope.db.transaction(function (tx) {
-                for (var i = 0; i < dataForPreparation.length; i++) {
 
-                    //data[i][0] + '' because otherwise id's like 1.0, 2.0 are stored
-                    tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
+            for (var i = 0; i < dataForPreparation.length; i++) {
+                tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
+            }
 
-                }
-            }, function errorHandler(transaction, error) {
-                console.log("Error : " + transaction.message);
-            }, callback
-        );
+        }, function errorHandler(transaction, error) {
+            console.dir(transaction);
+            console.dir(error);
+        }, callback);
 
     }
 
@@ -140,7 +135,6 @@ sdApp.controller('PE_WebSql_TestD1Ctrl', function ($scope, $rootScope, testDataF
                 });
 
             });
-
 
         }, 1000);
 

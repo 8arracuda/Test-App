@@ -74,22 +74,16 @@ sdApp.controller('PE_WebSql_TestR1Ctrl', function ($scope, $rootScope, testDataF
 
     function saveAddressData(callback) {
 
-        console.log('saveTable1ToWebSQL start');
-
         $scope.db.transaction(function (tx) {
 
             for (var i = 0; i < dataForPreparation.length; i++) {
                 tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
             }
 
-            console.log(dataForPreparation.length + ' addresses saved in WebSQL database  -' + tableName + '-?');
-
         }, function errorHandler(transaction, error) {
             alert("Error : " + transaction.message);
             alert("Error : " + error.message);
         }, callback);
-
-        console.log('saveTable1ToWebSQL executed');
 
     }
 

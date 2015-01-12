@@ -83,7 +83,6 @@ sdApp.controller('PE_IndexedDB_TestC3Ctrl', function ($scope, $rootScope, testDa
                 $scope.db = event.target.result;
 
 
-                //TODO Dieser Code funktioniert nicht! Change or delete!
                 //remove old objectStores if there were any
                 //if (event.oldVersion < 1) {
                 //    $scope.db.deleteObjectStore(objStoreName);
@@ -92,6 +91,7 @@ sdApp.controller('PE_IndexedDB_TestC3Ctrl', function ($scope, $rootScope, testDa
                 //create a new objectStore
                 //var objectStore = $scope.db.createObjectStore(objStoreName, {keyPath: "key"});
                 $scope.db.createObjectStore(objStoreName, {});
+                //var objectStore = $scope.db.createObjectStore(objStoreName, {});
 
 
             }
@@ -115,6 +115,7 @@ sdApp.controller('PE_IndexedDB_TestC3Ctrl', function ($scope, $rootScope, testDa
     $scope.startPerformanceTest = function () {
 
         $scope.testInProgress = true;
+        console.log(testDataFactory.getBigDataset());
         var datasetString = JSON.stringify(testDataFactory.getBigDataset());
         var timeStart = new Date().getTime();
 

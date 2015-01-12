@@ -63,9 +63,7 @@ sdApp.controller('PE_WebSql_TestU1Ctrl', function ($scope, $rootScope, testDataF
     $scope.initWebSQL = function () {
         console.log('initWebSQL start');
         $scope.db = window.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        //$scope.db.transaction($scope.setupWebSQL, $scope.errorHandlerWebSQL, $scope.dbReadyWebSQL);
         $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
-        //TODO rename all CreateTableEinzelwerte / CreateTableMediendaten method names to createTable!
         console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
@@ -80,23 +78,24 @@ sdApp.controller('PE_WebSql_TestU1Ctrl', function ($scope, $rootScope, testDataF
 
     $scope.errorHandlerWebSQL = function (e) {
         console.log('errorHandlerWebSQL start');
-        alert(e.message);
-        console.log(e.message);
+        console.log(console.dir(e));
         console.log('errorHandlerWebSQL executed');
     };
 
     function saveAddressData(callback) {
+
+
         $scope.db.transaction(function (tx) {
-                for (var i = 0; i < dataForPreparation.length; i++) {
 
-                    //data[i][0] + '' because otherwise id's like 1.0, 2.0 are stored
-                    tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
+            for (var i = 0; i < dataForPreparation.length; i++) {
+                tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
+            }
 
-                }
-            }, function errorHandler(transaction, error) {
-                console.log("Error : " + transaction.message);
-            }, callback
-        );
+        }, function errorHandler(transaction, error) {
+            alert("Error : " + transaction.message);
+            alert("Error : " + error.message);
+        }, callback);
+
     }
 
     $scope.startPerformanceTest = function () {

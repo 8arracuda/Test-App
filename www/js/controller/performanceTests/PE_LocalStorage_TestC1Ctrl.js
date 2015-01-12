@@ -50,13 +50,12 @@ sdApp.controller('PE_LocalStorage_TestC1Ctrl', function ($scope, $rootScope, tes
             $scope.testInProgress = true;
             $scope.$apply();
 
-
             setTimeout(function () {
 
                 var timeStart = new Date().getTime();
 
                 for (var i = 0; i < amountOfData; ++i) {
-                    localStorage.setItem(addressToSave[0], JSON.stringify(addressToSave));
+                    localStorage.setItem(i, JSON.stringify(data[i]));
                 }
 
                 var timeEnd = new Date().getTime();
