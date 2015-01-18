@@ -1,4 +1,4 @@
-sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory) {
+sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory, SQLDatabaseClearTable) {
     var iteration = 1;
 
     var dataForPreparation;
@@ -49,21 +49,6 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    function clearTable() {
-
-        $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerWebSQL);
-        });
-
-        function clearedTableCallback(transaction, results) {
-            console.log('Table ' + tableName + ' has been cleared');
-            $scope.isPrepared = true;
-            $scope.$apply();
-
-        }
-
-    }
-
     function loadDataForPreparation() {
 
         dataForPreparation = testDataFactory.testData();
@@ -74,11 +59,12 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
         $scope.prepareInProgress=true;
         $scope.$apply();
         loadDataForPreparation();
-        clearTable();
-        $scope.prepareInProgress=false;
-        $scope.isPrepared = true;
-        console.log('prepare function finished');
-        $scope.$apply();
+        SQLDatabaseClearTable.clearTable($scope.db, tableName, function () {
+            $scope.prepareInProgress = false;
+            $scope.isPrepared = true;
+            console.log('prepare function finished');
+            $scope.$apply();
+        });
 
     };
 
@@ -113,11 +99,11 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    $scope.initWebSQL = function () {
-        console.log('initWebSQL start');
-        $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
-        console.log('initWebSQL executed');
+    $scope.init = function () {
+        console.log('init start');
+        $scope.db = window.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
+        $scope.db.transaction($scope.createTable, $scope.errorHandler);
+        console.log('init executed');
         $scope.databaseOpened = true;
     };
 
@@ -127,11 +113,11 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    $scope.errorHandlerWebSQL = function (e) {
-        console.log('errorHandlerWebSQL start');
+    $scope.errorHandler = function (e) {
+        console.log('errorHandler start');
         alert(e.message);
         console.log(e.message);
-        console.log('errorHandlerWebSQL executed');
+        console.log('errorHandler executed');
     };
 
 });

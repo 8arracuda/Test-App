@@ -123,20 +123,11 @@ sdApp.directive('ngPrepareSectionForTests', function () {
 
 });
 
-sdApp.directive('ngOpenDatabaseSectionWebsql', function () {
+sdApp.directive('ngOpenDatabaseButton', function () {
 
     return {
         restrict: 'A',
-        templateUrl: 'customAngularDirectives/OpenDatabaseSectionWebsql.html'
-    }
-
-});
-
-sdApp.directive('ngOpenDatabaseSectionSqliteplugin', function () {
-
-    return {
-        restrict: 'A',
-        templateUrl: 'customAngularDirectives/OpenDatabaseSectionSqliteplugin.html'
+        templateUrl: 'customAngularDirectives/OpenDatabaseButton.html'
     }
 
 });

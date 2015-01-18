@@ -48,7 +48,7 @@ userAgentForDesktopDevelopment2 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_
 
 //}
 
-var sdApp = angular.module('sdApp', ["ngRoute", "mobile-angular-ui", "TestHelperFactory", "techSupportFactory", "IndexedDBClearObjectStore", "FileApiDeleteAllFilesFactory", "testDataFactory", "PE_ParameterFactory", "ngAnimate"]);
+var sdApp = angular.module('sdApp', ["ngRoute", "mobile-angular-ui", "TestHelperFactory", "techSupportFactory", "IndexedDBClearObjectStore", "SQLDatabaseClearTable", "FileApiDeleteAllFilesFactory", "testDataFactory", "PE_ParameterFactory", "ngAnimate"]);
 
 //copied from
 // http://thiscouldbebetter.wordpress.com/2013/01/31/reading-a-string-from-a-file-in-javascript/

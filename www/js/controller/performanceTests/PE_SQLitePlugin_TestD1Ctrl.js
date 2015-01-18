@@ -1,4 +1,4 @@
-sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory) {
+sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory, SQLDatabaseClearTable) {
 
     var iteration = 1;
 
@@ -51,19 +51,11 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    function clearTable(callback) {
-
-        $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], $scope.errorHandlerWebSQL);
-        }, $scope.errorHandlerWebSQL, callback);
-
-    }
-
-    $scope.initWebSQL = function () {
-        console.log('initWebSQL start');
-        $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
-        console.log('initWebSQL executed');
+    $scope.init = function () {
+        console.log('init start');
+        $scope.db = window.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
+        $scope.db.transaction($scope.createTable, $scope.errorHandler );
+        console.log('init executed');
         $scope.databaseOpened = true;
     };
 
@@ -74,7 +66,7 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
         console.log('createTable executed');
     };
 
-    $scope.errorHandlerWebSQL = function (e) {
+    $scope.errorHandler = function (e) {
         console.log(e.message);
     };
 
@@ -126,7 +118,7 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
         $scope.prepareInProgress = true;
         $scope.$apply();
         setTimeout(function () {
-            clearTable(function () {
+            SQLDatabaseClearTable.clearTable($scope.db, tableName, function () {
                 loadDataForPreparation();
                 saveAddressData(function () {
                     $scope.prepareInProgress = false;
@@ -145,6 +137,5 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
         dataForPreparation = testDataFactory.testData();
 
     }
-
 
 });

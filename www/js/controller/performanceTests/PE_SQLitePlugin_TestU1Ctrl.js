@@ -1,4 +1,4 @@
-sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory) {
+sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory, SQLDatabaseClearTable) {
 
     var iteration = 1;
 
@@ -51,19 +51,12 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
         console.log('selectedTestVariant= ' + $scope.selectedTestVariant + ' (amountOfData= ' + amountOfData + ')');
 
     };
-    function clearTable(callback) {
 
-        $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], $scope.errorHandlerWebSQL);
-        }, $scope.errorHandlerWebSQL, callback);
-
-    }
-
-    $scope.initWebSQL = function () {
-        console.log('initWebSQL start');
-        $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
-        console.log('initWebSQL executed');
+    $scope.init = function () {
+        console.log('init start');
+        $scope.db = window.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
+        $scope.db.transaction($scope.createTable, $scope.errorHandler);
+        console.log('init executed');
         $scope.databaseOpened = true;
     };
 
@@ -75,10 +68,10 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
         console.log('createTable executed');
     };
 
-    $scope.errorHandlerWebSQL = function (e) {
-        console.log('errorHandlerWebSQL start');
+    $scope.errorHandler = function (e) {
+        console.log('errorHandler start');
         console.log(console.dir(e));
-        console.log('errorHandlerWebSQL executed');
+        console.log('errorHandler executed');
     };
 
     function saveAddressData(callback) {
@@ -129,7 +122,7 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
     $scope.prepare = function () {
         $scope.prepareInProgress=true;
         $scope.$apply();
-        clearTable(function() {
+        SQLDatabaseClearTable.clearTable($scope.db, tableName, function () {
             loadDataForPreparation();
             saveAddressData(function() {
                 loadDataForUpdate();
