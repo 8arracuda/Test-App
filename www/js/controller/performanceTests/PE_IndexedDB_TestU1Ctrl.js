@@ -87,17 +87,11 @@ sdApp.controller('PE_IndexedDB_TestU1Ctrl', function ($scope, $rootScope, testDa
                 console.log('request.onupgradeneeded (in openDatabase)');
                 $scope.db = event.target.result;
 
-
-                //TODO Dieser Code funktioniert nicht! Change or delete!
-                //remove old objectStores if there were any
-                //if (event.oldVersion < 1) {
                 //$scope.db.deleteObjectStore(objStoreName);
-                //}
 
                 //create a new objectStore
                 var objectStore = $scope.db.createObjectStore(objStoreName, {});
 
-                //Column key is defined as index for the objectStore "einzelwerte"
                 objectStore.createIndex("id", "id", {unique: true});
 
             }

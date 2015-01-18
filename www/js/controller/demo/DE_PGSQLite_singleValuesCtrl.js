@@ -99,7 +99,7 @@ sdApp.controller('DE_PGSQLite_singleValuesCtrl', function ($scope) {
         $scope.databaseOpened = true;
     };
 
-    $scope.createTableEinzelwerte = function (tx) {
+    $scope.createTableSingleValues = function (tx) {
         console.log('createTableEinzelwerte start');
         tx.executeSql('CREATE TABLE IF NOT EXISTS einzelwerte(id INTEGER PRIMARY KEY AUTOINCREMENT, keyName TEXT, value TEXT)');
         console.log('createTableEinzelwerte executed');
@@ -167,7 +167,7 @@ sdApp.controller('DE_PGSQLite_singleValuesCtrl', function ($scope) {
         }
     };
 
-    $scope.deleteTableEinzelwerte = function () {
+    $scope.deleteTableSingleValues= function () {
 
         dbWebSQL.transaction(function (tx) {
             tx.executeSql('DROP TABLE einzelwerte', [], $scope.gotResults_Check, $scope.errorHandlerWebSQL);
@@ -209,7 +209,7 @@ sdApp.controller('DE_PGSQLite_singleValuesCtrl', function ($scope) {
         console.log('gotResults executed');
     };
 
-    $scope.updateEinzelwerteView = function () {
+    $scope.updateSingleValuesView = function () {
 
         $scope.keyLoaded = $scope.keyToLoad;
 

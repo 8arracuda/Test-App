@@ -6,7 +6,7 @@ sdApp.controller('DE_PG_FileAPI_singleValuesCtrl', function ($scope, $rootScope)
     $scope.keyToRemove = "";
     $scope.stringForEinzelwerteView = "";
 
-    function getFilenameForEinzelwerte(key) {
+    function getFilenameForSingleValues(key) {
         return 'key_' + key + '.txt';
     }
 
@@ -18,7 +18,7 @@ sdApp.controller('DE_PG_FileAPI_singleValuesCtrl', function ($scope, $rootScope)
         window.requestFileSystem(window.PERSISTENT, 1024 * 1024,
             function (fs) {
 
-                var filename = getFilenameForEinzelwerte($scope.keyToSave);
+                var filename = getFilenameForSingleValues($scope.keyToSave);
                 fs.root.getFile(filename, {create: true}, function (fileEntry) {
 
                     fileEntry.createWriter(function (fileWriter) {
@@ -55,7 +55,7 @@ sdApp.controller('DE_PG_FileAPI_singleValuesCtrl', function ($scope, $rootScope)
         window.requestFileSystem(window.PERSISTENT, 1024 * 1024,
             function (fs) {
 
-                var filename = getFilenameForEinzelwerte($scope.keyToLoad);
+                var filename = getFilenameForSingleValues($scope.keyToLoad);
                 fs.root.getFile(filename, {}, function (fileEntry) {
 
                     // Get a File object representing the file,
@@ -91,7 +91,7 @@ sdApp.controller('DE_PG_FileAPI_singleValuesCtrl', function ($scope, $rootScope)
         $scope.inProgress = true;
         console.log('removeKeyFromFileAPI');
         window.requestFileSystem(window.PERSISTENT, 1024 * 1024, function (fs) {
-            var filename = getFilenameForEinzelwerte($scope.keyToRemove);
+            var filename = getFilenameForSingleValues($scope.keyToRemove);
             fs.root.getFile(filename, {create: false}, function (fileEntry) {
 
                 fileEntry.remove(function () {
@@ -132,12 +132,12 @@ sdApp.controller('DE_PG_FileAPI_singleValuesCtrl', function ($scope, $rootScope)
     //
     //};
 
-    function updateEinzelwerteViewString(errorMessage) {
+    function updateSingleValuesViewString(errorMessage) {
 
         if (errorMessage) {
-            $scope.stringForEinzelwerteView = errorMessage;
+            $scope.stringForSingleValuesView = errorMessage;
         } else {
-            $scope.stringForEinzelwerteView = 'key: ' + $scope.keyLoaded + ' value: ' + $scope.valueLoadedFromPGFileAPI;
+            $scope.stringForSingleValuesView = 'key: ' + $scope.keyLoaded + ' value: ' + $scope.valueLoadedFromPGFileAPI;
         }
 
         $scope.$apply();
@@ -183,7 +183,7 @@ sdApp.controller('DE_PG_FileAPI_singleValuesCtrl', function ($scope, $rootScope)
             case FileError.NOT_FOUND_ERR:
                 msg = 'NOT_FOUND_ERR(2)';
 
-                updateEinzelwerteViewString('Key does not exist.');
+                updateSingleValuesViewString('Key does not exist.');
 
                 break;
             case FileError.SECURITY_ERR:

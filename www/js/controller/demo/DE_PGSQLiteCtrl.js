@@ -57,7 +57,7 @@ sdApp.controller('DE_PGSQLiteCtrl', function ($scope, $rootScope) {
 
 
     //for Einzelwerte
-    $scope.showContentOfTableEinzelwerte = function () {
+    $scope.showContentOfTableSingleValues = function () {
 
         console.log('showContentOfTableEinzelwerte start');
         $scope.data = [];
@@ -67,10 +67,10 @@ sdApp.controller('DE_PGSQLiteCtrl', function ($scope, $rootScope) {
 
             tx.executeSql('SELECT * FROM einzelwerte', [], function (transaction, results) {
 
-                $scope.dataForOverlayEinzelwerte = [];
+                $scope.dataForOverlaySingleValues = [];
                 for (var j = 0; j < results.rows.length; j++) {
                     var row = results.rows.item(j);
-                    $scope.dataForOverlayEinzelwerte.push(row);
+                    $scope.dataForOverlaySingleValues.push(row);
                 }
 
                 //alert(JSON.stringify($scope.dataForOverlay));
@@ -87,7 +87,7 @@ sdApp.controller('DE_PGSQLiteCtrl', function ($scope, $rootScope) {
 
     };
 
-    $scope.deleteContentOfTableEinzelwerte = function () {
+    $scope.deleteContentOfTableSingleValues = function () {
 
         dbWebSQL.transaction(function (tx) {
 

@@ -15,26 +15,16 @@ sdApp.controller('DE_WebSql_singleValuesCtrl', function ($scope) {
     $scope.save= function () {
 
         console.log('addRow start');
-//        $scope.db.transaction(function (tx) {
-//            var msg = $scope.inputString;
-//            var d = new Date();
-//            tx.executeSql("INSERT INTO einzelwerte(log, created) VALUES(?,?)", [$scope.keyToSave, $scope.valueToSave]);
-//        }, $scope.errorHandlerWebSQL, function () {
-//            console.log('error occured in addRow')
-//        });
 
         $scope.db.transaction(function (tx) {
 
             tx.executeSql("INSERT INTO einzelwerte(keyName, value) VALUES(?,?)", [$scope.keyToSave, $scope.valueToSave]);
         }, function errorHandler(transaction, error) {
             alert("Error : " + transaction.message);
-            //alert("Error : " + error.message);
         });
 
         console.log('addRow executed');
     };
-
-
 
     $scope.inputString = "";
 
@@ -53,55 +43,27 @@ sdApp.controller('DE_WebSql_singleValuesCtrl', function ($scope) {
                 $scope.$apply();
 
             }, function (t, e) {
-                // couldn't read database
-                //span.textContent = '(unknown: ' + e.message + ')';
                 alert("couldn't read database");
             });
-
-            //alert('tables:' + JSON.stringify(tables));
         });
-
     };
 
-    //$scope.getAllValues = function () {
-    //
-    //    console.log('getAllValues start');
-    //    $scope.data = [];
-    //    tables = [];
-    //
-    //    $scope.db.transaction(function (tx) {
-    //
-    //        tx.executeSql('SELECT * FROM einzelwerte', [], function (transaction, results) {
-    //
-    //$scope.$apply();
-    //
-    //        }, function (t, e) {
-    //            // couldn't read database
-    //
-    //            alert("couldn't read database");
-    //        });
-    //
-    //
-    //    });
-    //
-    //    //$scope.$apply();
-    //};
 
     $scope.initWebSQL = function () {
         console.log('initWebSQL start');
         $scope.db = window.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
         //$scope.db.transaction($scope.setupWebSQL, $scope.errorHandlerWebSQL, $scope.dbReadyWebSQL);
-        $scope.db.transaction($scope.createTableEinzelwerte, $scope.errorHandlerWebSQL);
+        $scope.db.transaction($scope.createTableSingleValues, $scope.errorHandlerWebSQL);
         console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
-    $scope.createTableEinzelwerte = function (tx) {
-        console.log('createTableEinzelwerte start');
+    $scope.createTableSingleValues = function (tx) {
+        console.log('createTableSingleValues start');
 
         //Define the structure of the database
-        tx.executeSql('CREATE TABLE IF NOT EXISTS einzelwerte(keyName TEXT PRIMARY KEY, value TEXT)');
-        console.log('createTableEinzelwerte executed');
+        tx.executeSql('CREATE TABLE IF NOT EXISTS singleValues(keyName TEXT PRIMARY KEY, value TEXT)');
+        console.log('createTableSingleValues executed');
     };
 
     $scope.errorHandlerWebSQL = function (e) {
@@ -111,65 +73,11 @@ sdApp.controller('DE_WebSql_singleValuesCtrl', function ($scope) {
         console.log('errorHandlerWebSQL executed');
     };
 
-/*    $scope.dbReadyWebSQL = function () {
-        console.log('dbReadyWebSQL start');
-        $scope.db.transaction(function (tx) {
 
-            tx.executeSql("INSERT INTO einzelwerte(keyName, value) VALUES(?, ?)", [$scope.keyToSave, $scope.valueToSave]);
-            console.log('dbReadyWebSQL executed');
-        }, $scope.errorHandlerWebSQL, function () {
-            console.log('error occured in dbReadyWebSQL')
-        });
-    };*/
-
-    //$scope.deleteWebSQL = function () {
-    //    console.log('deleteWebSQL start');
-    //    $scope.db.transaction(function (tx) {
-    //        tx.executeSql("DELETE FROM einzelwerte");
-    //        console.log('deleteWebSQL executed');
-    //    }, $scope.errorHandlerWebSQL, function () {
-    //        console.log('error occured in db.deleteWebSQL')
-    //    });
-    //};
-
-    //$scope.testWebSQL = function () {
-    //    console.log('testWebSQL start');
-    //    $scope.db.transaction(function (tx) {
-    //        tx.executeSql("SELECT * FROM einzelwerte ORDER BY created DESC", [], $scope.gotResults, $scope.errorHandlerWebSQL);
-    //
-    //    });
-    //    console.log('testWebSQL executed');
-    //};
-
-
-    //$scope.check = function () {
-    //
-    //    $scope.db.transaction(function (tx) {
-    //        tx.executeSql("SELECT * FROM einzelwerte", [], $scope.gotResults, $scope.errorHandlerWebSQL);
-    //    });
-    //};
-
-    //$scope.wipeDatabase = function () {
-    //
-    //    var answer = confirm('Do you really want to remove all entries from the database -einzelwerte-?');
-    //
-    //    if (answer) {
-    //        alert('will delete');
-    //
-    //        $scope.db.transaction(function (tx) {
-    //            tx.executeSql("DELETE FROM einzelwerte", [], $scope.gotResults_Check, $scope.errorHandlerWebSQL);
-    //        });
-    //        // $scope.$apply();
-    //
-    //    } else {
-    //        alert('will not delete');
-    //    }
-    //};
-
-    $scope.deleteTableEinzelwerte = function () {
+    $scope.deleteTableSingleValues= function () {
 
         $scope.db.transaction(function (tx) {
-            tx.executeSql('DROP TABLE einzelwerte', [], $scope.gotResults_Check, $scope.errorHandlerWebSQL);
+            tx.executeSql('DROP TABLE singleValues', [], $scope.gotResults_Check, $scope.errorHandlerWebSQL);
         });
 
     };
@@ -214,9 +122,9 @@ sdApp.controller('DE_WebSql_singleValuesCtrl', function ($scope) {
 
         $scope.db.transaction(function (tx) {
 
-            console.log('SELECT * FROM einzelwerte WHERE keyName = ' +  $scope.keyToLoad);
+            console.log('SELECT * FROM singleValues WHERE keyName = ' +  $scope.keyToLoad);
 
-            tx.executeSql("SELECT * FROM einzelwerte WHERE keyName = ?", [$scope.keyToLoad], function (transaction, results) {
+            tx.executeSql("SELECT * FROM singleValues WHERE keyName = ?", [$scope.keyToLoad], function (transaction, results) {
 
                 if (results.rows.length == 0) {
                     $scope.valueLoadedFromWebSQL = 'does not exist';
@@ -239,7 +147,7 @@ sdApp.controller('DE_WebSql_singleValuesCtrl', function ($scope) {
 
         $scope.db.transaction(function (tx) {
 
-            tx.executeSql('DELETE FROM einzelwerte WHERE keyName = ?', [$scope.keyToLoad], function (transaction, results) {
+            tx.executeSql('DELETE FROM singleValues WHERE keyName = ?', [$scope.keyToLoad], function (transaction, results) {
 
                 console.log('deleted rows with key: ' + $scope.keyToLoad);
 

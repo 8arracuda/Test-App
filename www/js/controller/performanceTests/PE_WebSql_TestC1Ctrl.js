@@ -109,8 +109,6 @@ sdApp.controller('PE_WebSql_TestC1Ctrl', function ($scope, $rootScope, testDataF
                 console.log(amountOfData + ' items added');
             }
         );
-
-
     };
 
     $scope.initWebSQL = function () {
@@ -136,5 +134,3 @@ sdApp.controller('PE_WebSql_TestC1Ctrl', function ($scope, $rootScope, testDataF
     };
 
 });
-
-

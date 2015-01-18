@@ -76,8 +76,6 @@ sdApp.controller('PE_IndexedDB_TestC2Ctrl', function ($scope, $rootScope, testDa
                 console.log('request.onsuccess (in openDatabase)');
                 $scope.db = request.result;
 
-
-                //TODO status light sounds not very professional....maybe change this....
                 //for updating the "status-light" on the openDatabase button
                 $scope.databaseOpened = true;
                 $scope.$apply();
@@ -88,12 +86,7 @@ sdApp.controller('PE_IndexedDB_TestC2Ctrl', function ($scope, $rootScope, testDa
                 console.log('foo');
                 $scope.db = event.target.result;
 
-
-                //TODO Dieser Code funktioniert nicht! Change or delete!
-                //remove old objectStores if there were any
-                //if (event.oldVersion < 1) {
                 //$scope.db.deleteObjectStore(objStoreName);
-                //}
 
                 //create a new objectStore
                 var objectStore = $scope.db.createObjectStore(objStoreName, {});

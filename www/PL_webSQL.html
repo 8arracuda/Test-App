@@ -18,7 +18,8 @@
     <div class="panel-body">
         <button class="btn"
                 ng-class="{ 'btn-success' : databaseOpened, 'btn-danger' : !databaseOpened  }"></button>
-        <button class="btn btn-primary" ng-click="initWebSQL()">init/open database</button>
+        <button class="btn btn-primary" ng-click="initWebSQL('A')">open database (A)</button>
+        <button class="btn btn-primary" ng-click="initWebSQL('B')">open database (B)</button>
     </div>
 
     <h2 class="panel-title">
