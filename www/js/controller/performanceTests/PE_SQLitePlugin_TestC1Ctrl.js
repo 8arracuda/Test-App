@@ -99,7 +99,7 @@ sdApp.controller('PE_SQLitePlugin_TestC1Ctrl', function ($scope, $rootScope, tes
 
     $scope.init = function () {
         console.log('init start');
-        $scope.db = window.openDatabase(dbName, dbVersion, dbName, 1024 * 1024);
+        $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 1024 * 1024);
         $scope.db.transaction($scope.createTable, $scope.errorHandler);
         console.log('init executed');
         $scope.databaseOpened = true;
