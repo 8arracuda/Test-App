@@ -1,98 +1,97 @@
 sdApp.controller('PE_LocalStorage_TestC1Ctrl', function ($scope, $rootScope, testDataFactory, PE_ParameterFactory) {
-        var iteration = 1;
 
-        //prepare results-array
-        var data;
-        $scope.results = [];
+    var iteration = 1;
 
-        $scope.isPrepared = false;
+    //prepare results-array
+    var data;
+    $scope.results = [];
 
-        var amountOfData;
-        var amountOfData_testC1a = PE_ParameterFactory.amountOfData_testC1a;
-        var amountOfData_testC1b = PE_ParameterFactory.amountOfData_testC1b;
+    $scope.isPrepared = false;
 
-        $scope.selectedTestVariant = '';
-        $scope.preparationText = 'The prepare function will clear all data stored with localStorage';
-        $scope.mainTestDecription = 'The test stores each address in a single key-value pair.';
-        $scope.testName1 = 'Test C1-500';
-        $scope.testDecription1 = 'Stores ' + amountOfData_testC1a + ' addesses';
-        $scope.testName2 = 'Test C1-2000';
-        $scope.testDecription2 = 'Stores ' + amountOfData_testC1b + ' addesses';
+    var amountOfData;
+    var amountOfData_testC1a = PE_ParameterFactory.amountOfData_testC1a;
+    var amountOfData_testC1b = PE_ParameterFactory.amountOfData_testC1b;
 
+    $scope.selectedTestVariant = '';
+    $scope.preparationText = 'The prepare function will clear all data stored with localStorage';
+    $scope.mainTestDecription = 'The test stores each address in a single key-value pair.';
+    $scope.testName1 = 'Test C1-500';
+    $scope.testDecription1 = 'Stores ' + amountOfData_testC1a + ' addesses';
+    $scope.testName2 = 'Test C1-2000';
+    $scope.testDecription2 = 'Stores ' + amountOfData_testC1b + ' addesses';
 
-        $scope.selectTestVariant = function (testVariant) {
-            $scope.selectedTestVariant = testVariant;
+    $scope.selectTestVariant = function (testVariant) {
+        $scope.selectedTestVariant = testVariant;
 
-            if (testVariant == 'TestC1a') {
-                amountOfData = amountOfData_testC1a;
-            } else {
-                amountOfData = amountOfData_testC1b;
-            }
-            console.log('selectedTestVariant= ' + $scope.selectedTestVariant + ' (amountOfData= ' + amountOfData + ')');
+        if (testVariant == 'TestC1a') {
+            amountOfData = amountOfData_testC1a;
+        } else {
+            amountOfData = amountOfData_testC1b;
+        }
+        console.log('selectedTestVariant= ' + $scope.selectedTestVariant + ' (amountOfData= ' + amountOfData + ')');
 
-        };
+    };
 
-        $scope.reset = function () {
+    $scope.reset = function () {
 
-            var answer = confirm('Do you really want to reset this page. All test results will be removed!');
+        var answer = confirm('Do you really want to reset this page. All test results will be removed!');
 
-            if (answer) {
-                iteration = 1;
-                $scope.isPrepared = false;
-                $scope.results = [];
-                $scope.selectedTestVariant = '';
-            }
-
-        };
-
-        $scope.startPerformanceTest = function() {
-
-            $scope.testInProgress = true;
-            $scope.$apply();
-
-            setTimeout(function () {
-
-                var timeStart = new Date().getTime();
-
-                for (var i = 0; i < amountOfData; ++i) {
-                    localStorage.setItem(i, JSON.stringify(data[i]));
-                }
-
-                var timeEnd = new Date().getTime();
-
-                var timeDiff = timeEnd - timeStart;
-
-                $scope.results.push({iteration:  iteration,  time: timeDiff});
-
-                $scope.isPrepared = false;
-                $scope.testInProgress = false;
-                $scope.$apply();
-                iteration++;
-            }, 2000);
-
-        };
-
-        function clearLocalStorage() {
-
-            localStorage.clear();
-
+        if (answer) {
+            iteration = 1;
+            $scope.isPrepared = false;
+            $scope.results = [];
+            $scope.selectedTestVariant = '';
         }
 
-        function loadData() {
+    };
 
-            data = testDataFactory.testData();
+    $scope.startPerformanceTest = function() {
 
-        }
+        $scope.testInProgress = true;
+        $scope.$apply();
 
-        $scope.prepare = function () {
+        setTimeout(function () {
 
-            clearLocalStorage();
-            loadData();
-            $scope.isPrepared = true;
-            console.log('prepare function finished');
+            var timeStart = new Date().getTime();
+
+            for (var i = 0; i < amountOfData; ++i) {
+                localStorage.setItem(i, JSON.stringify(data[i]));
+            }
+
+            var timeEnd = new Date().getTime();
+
+            var timeDiff = timeEnd - timeStart;
+
+            $scope.results.push({iteration:  iteration,  time: timeDiff});
+
+            $scope.isPrepared = false;
+            $scope.testInProgress = false;
             $scope.$apply();
+            iteration++;
+        }, 2000);
 
-        };
+    };
+
+    function clearLocalStorage() {
+
+        localStorage.clear();
 
     }
-);
+
+    function loadData() {
+
+        data = testDataFactory.testData();
+
+    }
+
+    $scope.prepare = function () {
+
+        clearLocalStorage();
+        loadData();
+        $scope.isPrepared = true;
+        console.log('prepare function finished');
+        $scope.$apply();
+
+    };
+
+});

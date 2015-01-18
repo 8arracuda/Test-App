@@ -75,11 +75,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
                             "count": 1
                         },
                         {
@@ -123,10 +123,10 @@
         "org.apache.cordova.camera": {
             "PACKAGE_NAME": "de.msteiner.TestApp"
         },
-        "org.apache.cordova.device-motion": {
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "de.msteiner.TestApp"
         },
-        "org.apache.cordova.device": {
+        "org.apache.cordova.device-motion": {
             "PACKAGE_NAME": "de.msteiner.TestApp"
         },
         "org.apache.cordova.file": {

@@ -47,6 +47,9 @@ sdApp.controller('PE_LocalStorage_TestR1Ctrl', function ($scope, $rootScope, tes
 
     };
 
+
+
+
     $scope.startPerformanceTest = function () {
         $scope.testInProgress = true;
         $scope.$apply();

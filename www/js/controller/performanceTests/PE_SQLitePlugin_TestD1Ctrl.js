@@ -51,57 +51,45 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    function clearTable() {
+    function clearTable(callback) {
 
         $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerSQLitePlugin);
-        });
+            tx.executeSql("DELETE FROM " + tableName, [], $scope.errorHandlerWebSQL);
+        }, $scope.errorHandlerWebSQL, callback);
 
-        function clearedTableCallback(transaction, results) {
-            console.log('Table ' + tableName + ' has been cleared');
-            $scope.isPrepared = true;
-            $scope.$apply();
+    }
 
-        }
-    };
-
-    $scope.initSQLitePlugin = function () {
-        console.log('initSQLitePlugin start');
+    $scope.initWebSQL = function () {
+        console.log('initWebSQL start');
         $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerSQLitePlugin);
-        //TODO rename all CreateTableEinzelwerte / CreateTableMediendaten method names to createTable!
-        console.log('initSQLitePlugin executed');
+        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
+        console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
     $scope.createTable = function (tx) {
         console.log('createTable start');
-
         //Define the structure of the database
         tx.executeSql('CREATE TABLE IF NOT EXISTS ' + tableName + '(id TEXT PRIMARY KEY, address TEXT)');
         console.log('createTable executed');
     };
 
-    $scope.errorHandlerSQLitePlugin = function (e) {
-        console.log('errorHandlerSQLitePlugin start');
-        alert(e.message);
+    $scope.errorHandlerWebSQL = function (e) {
         console.log(e.message);
-        console.log('errorHandlerSQLitePlugin executed');
     };
 
-    function saveAddressData() {
+    function saveAddressData(callback) {
+
         $scope.db.transaction(function (tx) {
-                for (var i = 0; i < dataForPreparation.length; i++) {
 
-                    //data[i][0] + '' because otherwise id's like 1.0, 2.0 are stored
-                    tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
-
-                }
-            }, function errorHandler(transaction, error) {
-                console.log("Error : " + transaction.message);
-                //console.log("Error : " + error.message);
+            for (var i = 0; i < dataForPreparation.length; i++) {
+                tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
             }
-        );
+
+        }, function errorHandler(transaction, error) {
+            console.dir(transaction);
+            console.dir(error);
+        }, callback);
 
     }
 
@@ -113,17 +101,17 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
         $scope.db.transaction(function (tx) {
                 for (var i = 0; i < amountOfData; i++) {
 
-                    tx.executeSql("DELETE FROM " + tableName + " WHERE id = ?", [i+'']);
+                    tx.executeSql("DELETE FROM PE_TestD1 WHERE id = ?", [i + '']);
 
                 }
             }, function errorHandler(transaction, error) {
                 console.log("Error : " + transaction.message);
                 console.log("Error : " + error.message);
-            }, function() {
+            }, function () {
                 var timeEnd = new Date().getTime();
 
                 var timeDiff = timeEnd - timeStart;
-                $scope.results.push({iteration:  iteration,  time: timeDiff});
+                $scope.results.push({iteration: iteration, time: timeDiff});
                 $scope.testInProgress = false;
                 $scope.isPrepared = false;
                 iteration++;
@@ -134,28 +122,28 @@ sdApp.controller('PE_SQLitePlugin_TestD1Ctrl', function ($scope, $rootScope, tes
 
     };
 
-
     $scope.prepare = function () {
-        $scope.prepareInProgress=true;
+        $scope.prepareInProgress = true;
         $scope.$apply();
-        clearTable();
-        loadDataForPreparation();
-        saveAddressData();
-        loadDataForUpdate();
-        $scope.prepareInProgress=false;
-        $scope.isPrepared = true;
-        console.log('prepare function finished');
-        $scope.$apply();
+        setTimeout(function () {
+            clearTable(function () {
+                loadDataForPreparation();
+                saveAddressData(function () {
+                    $scope.prepareInProgress = false;
+                    $scope.isPrepared = true;
+                    $scope.$apply();
+                });
+
+            });
+
+        }, 1000);
+
     };
 
     function loadDataForPreparation() {
 
         dataForPreparation = testDataFactory.testData();
 
-    }
-
-    function loadDataForUpdate() {
-        dataForUpdate = testDataFactory.testDataForUpdateTests();
     }
 
 

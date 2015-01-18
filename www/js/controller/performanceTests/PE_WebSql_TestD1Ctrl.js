@@ -57,7 +57,7 @@ sdApp.controller('PE_WebSql_TestD1Ctrl', function ($scope, $rootScope, testDataF
             tx.executeSql("DELETE FROM " + tableName, [], $scope.errorHandlerWebSQL);
         }, $scope.errorHandlerWebSQL, callback);
 
-    };
+    }
 
     $scope.initWebSQL = function () {
         console.log('initWebSQL start');

@@ -51,7 +51,7 @@ sdApp.controller('PE_SQLitePlugin_TestC3Ctrl', function ($scope, $rootScope, tes
     function clearTable() {
 
         $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerSQLitePlugin);
+            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerWebSQL);
         });
 
         function clearedTableCallback(transaction, results) {
@@ -61,7 +61,7 @@ sdApp.controller('PE_SQLitePlugin_TestC3Ctrl', function ($scope, $rootScope, tes
 
         }
 
-    };
+    }
 
     $scope.prepare = function () {
         $scope.prepareInProgress=true;
@@ -73,40 +73,6 @@ sdApp.controller('PE_SQLitePlugin_TestC3Ctrl', function ($scope, $rootScope, tes
         $scope.$apply();
 
     };
-
-    //$scope.startPerformanceTest = function() {
-    //
-    //    $scope.testInProgress = true;
-    //
-    //    //prepare the array that will be written
-    //    //doing this in the loop would have a negative effect on the duration/time of the test
-    //    var datasetArray = [];
-    //    for (var i=0; i<amountOfData; i++) {
-    //        datasetArray.push(testDataFactory.getDatasetWithOffset(i));
-    //    }
-    //    //var datasetToWrite = testDataFactory.getDatasetWithOffset(0);
-    //
-    //    var timeStart = new Date().getTime();
-    //    $scope.db.transaction(function (tx) {
-    //            for (var i = 0; i < amountOfData; i++) {
-    //                tx.executeSql("INSERT INTO " + tableName + "(keyName, value) VALUES(?,?)", ['dataset_' + i, JSON.stringify(datasetArray[i])]);
-    //                //tx.executeSql("INSERT INTO " + tableName + "(keyName, value) VALUES(?,?)", ['dataset_' + i, JSON.stringify(datasetToWrite)]);
-    //            }
-    //        }, function errorHandler(transaction, error) {
-    //            console.log("Error : " + transaction.message);
-    //            console.log("Error : " + error.message);
-    //        }, function () {
-    //            console.log('success callback');
-    //            var timeEnd = new Date().getTime();
-    //            var timeDiff = timeEnd - timeStart;
-    //            $scope.results.push({iteration:  iteration,  time: timeDiff });
-    //            $scope.testInProgress = false;
-    //            $scope.isPrepared = false;
-    //            iteration++;
-    //            $scope.$apply();
-    //        }
-    //    );
-    //};
 
     $scope.startPerformanceTest = function() {
 
@@ -136,11 +102,11 @@ sdApp.controller('PE_SQLitePlugin_TestC3Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    $scope.initSQLitePlugin = function () {
-        console.log('initSQLitePlugin start');
+    $scope.initWebSQL = function () {
+        console.log('initWebSQL start');
         $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerSQLitePlugin);
-        console.log('initSQLitePlugin executed');
+        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
+        console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
@@ -151,11 +117,11 @@ sdApp.controller('PE_SQLitePlugin_TestC3Ctrl', function ($scope, $rootScope, tes
         console.log('createTable executed');
     };
 
-    $scope.errorHandlerSQLitePlugin = function (e) {
-        console.log('errorHandlerSQLitePlugin start');
+    $scope.errorHandlerWebSQL = function (e) {
+        console.log('errorHandlerWebSQL start');
         alert(e.message);
         console.log(e.message);
-        console.log('errorHandlerSQLitePlugin executed');
+        console.log('errorHandlerWebSQL executed');
     };
 
 });

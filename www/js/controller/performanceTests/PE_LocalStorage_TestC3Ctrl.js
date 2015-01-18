@@ -6,15 +6,14 @@ sdApp.controller('PE_LocalStorage_TestC3Ctrl', function ($scope, $rootScope, tes
 
     $scope.isPrepared = false;
 
-    var amountOfData_testC3a = PE_ParameterFactory.amountOfData_testC3a;
-    var amountOfData = amountOfData_testC3a;
+    var amountOfData = PE_ParameterFactory.amountOfData_testC3a;
 
-    $scope.selectedTestVariant = 'Test C3a';
+    $scope.selectedTestVariant = 'TestC3a';
     $scope.preparationText = 'The prepare function will clear all data stored with localStorage';
     $scope.mainTestDecription = 'The test stores datasets, with 4000 addresses each, into one key-value pair';
     $scope.testName1 = 'Test C3-6';
-    $scope.testDecription1 = 'Stores ' + amountOfData_testC3a + ' times 4,000 addresses in a single key/value pair.';
-
+   // $scope.testDecription1 = 'Stores ' + $scope.amountOfData + ' times 4,000 addresses in a single key/value pair. (On this test no selection is available, because only the big variant does not work in WebStorage because of the storage limitation)';
+    $scope.testDecription1 = 'foo ' + amountOfData + ' times 4,000 addresses in a single key/value pair. (On this test no selection is available, because only the big variant does not work in WebStorage because of the storage limitation)';
 
     $scope.reset = function () {
 

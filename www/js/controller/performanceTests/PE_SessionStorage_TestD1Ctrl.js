@@ -50,17 +50,11 @@ sdApp.controller('PE_SessionStorage_TestD1Ctrl', function ($scope, $rootScope, t
         $scope.testInProgress = true;
         $scope.$apply();
 
-        var addressIdsToDelete = testDataFactory.getRandomIndices();
-
-        if (addressIdsToDelete.length < amountOfData) {
-            alert('Warning: Too few address Ids defined. The test will produce wrong results!');
-        }
-
         var timeStart = new Date().getTime();
-        //for (var i = 0; i < addressIdsToLoad.length; i++) {
+
         for (var i = 0; i < amountOfData; i++) {
 
-            sessionStorage.removeItem(addressIdsToDelete[i]);
+            sessionStorage.removeItem(i);
 
         }
 
@@ -73,7 +67,6 @@ sdApp.controller('PE_SessionStorage_TestD1Ctrl', function ($scope, $rootScope, t
         $scope.$apply();
 
         iteration++;
-
 
     };
 

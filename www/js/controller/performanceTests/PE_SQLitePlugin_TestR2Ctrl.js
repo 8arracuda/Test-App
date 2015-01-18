@@ -56,21 +56,24 @@ sdApp.controller('PE_SQLitePlugin_TestR2Ctrl', function ($scope, $rootScope, tes
     };
 
     $scope.prepare = function () {
-        $scope.prepareInProgress=false;
+        $scope.prepareInProgress = true;
         $scope.$apply();
-        clearTable();
-        loadDataForPreparation();
-        saveAddressData();
-        $scope.prepareInProgress=false;
-        $scope.isPrepared = true;
-        console.log('prepare function finished');
-        $scope.$apply();
+        clearTable(function() {
+            loadDataForPreparation();
+            saveAddressData(function () {
+                $scope.prepareInProgress = false;
+                $scope.isPrepared = true;
+                console.log('prepare function finished');
+                $scope.$apply();
+            });
+
+        });
 
     };
 
-    function saveAddressData() {
+    function saveAddressData(callback) {
 
-        console.log('saveTable1ToSQLitePlugin start');
+        console.log('saveTable1ToWebSQL start');
 
         $scope.db.transaction(function (tx) {
 
@@ -78,14 +81,14 @@ sdApp.controller('PE_SQLitePlugin_TestR2Ctrl', function ($scope, $rootScope, tes
                 tx.executeSql("INSERT INTO " + tableName + "(id, firstName, lastName, street, zipcode, city, email, randomNumber1, randomNumber2) VALUES(?,?,?,?,?,?,?,?,?)", [dataForPreparation[i][0], dataForPreparation[i][1], dataForPreparation[i][2], dataForPreparation[i][3], dataForPreparation[i][4], dataForPreparation[i][5], dataForPreparation[i][6], dataForPreparation[i][7], dataForPreparation[i][8]]);
             }
 
-            console.log(dataForPreparation.length + ' addresses saved in SQLitePlugin database  -' + tableName + '-?');
+            console.log(dataForPreparation.length + ' addresses saved in WebSQL database  -' + tableName + '-?');
 
         }, function errorHandler(transaction, error) {
             alert("Error : " + transaction.message);
             alert("Error : " + error.message);
-        });
+        }, callback);
 
-        console.log('saveTable1ToSQLitePlugin executed');
+        console.log('saveTable1ToWebSQL executed');
 
     }
 
@@ -95,26 +98,20 @@ sdApp.controller('PE_SQLitePlugin_TestR2Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    function clearTable() {
+    function clearTable(callback) {
 
         $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerSQLitePlugin);
-        });
-
-        function clearedTableCallback(transaction, results) {
-            console.log('Table ' + tableName + ' has been cleared');
-            $scope.isPrepared = true;
-            $scope.$apply();
-
-        }
+            tx.executeSql("DELETE FROM " + tableName, [], $scope.errorHandlerWebSQL);
+        }, $scope.errorHandlerWebSQL, callback);
 
     };
 
-    $scope.initSQLitePlugin = function () {
-        console.log('initSQLitePlugin start');
+    $scope.initWebSQL = function () {
+        console.log('initWebSQL start');
         $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerSQLitePlugin);
-        console.log('initSQLitePlugin executed');
+        //$scope.db.transaction($scope.setupWebSQL, $scope.errorHandlerWebSQL, $scope.dbReadyWebSQL);
+        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
+        console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
@@ -124,52 +121,43 @@ sdApp.controller('PE_SQLitePlugin_TestR2Ctrl', function ($scope, $rootScope, tes
         console.log('createTable executed');
     };
 
-    $scope.errorHandlerSQLitePlugin = function (e) {
-        console.log('errorHandlerSQLitePlugin start');
+    $scope.errorHandlerWebSQL = function (e) {
+        console.log('errorHandlerWebSQL start');
         console.log(e.message);
-        console.log('errorHandlerSQLitePlugin executed');
+        console.log('errorHandlerWebSQL executed');
     };
-
 
     $scope.startPerformanceTest = function () {
 
         $scope.testInProgress = true;
         $scope.$apply();
 
-        var addressIdsToLoad = testDataFactory.getRandomIndices();
-
-        if (addressIdsToLoad.length < amountOfData) {
-            alert('Warning: Too few address Ids defined. The test will produce wrong results!');
-        }
-
         var timeStart = new Date().getTime();
-        var onSuccessCounter = 0;
 
         $scope.db.transaction(function (tx) {
 
             for (var i = 0; i < amountOfData; i++) {
 
-                tx.executeSql("SELECT * FROM " + tableName + " WHERE id = ?", [addressIdsToLoad[i]], function (transaction, results) {
-
+                tx.executeSql("SELECT * FROM PE_TestR2 WHERE id = ?", [i], function (transaction, results) {
                     //---Test-Output to check the returned values---
-                    //console.log('check Test R2:' + JSON.stringify(results.rows.item(0)));
-
-                    onSuccessCounter = onSuccessCounter + 1;
-
-                    if (onSuccessCounter == amountOfData) {
-                        var timeEnd = new Date().getTime();
-
-                        var timeDiff = timeEnd - timeStart;
-                        $scope.testInProgress = false;
-                        $scope.results.push({iteration:  iteration,  time: timeDiff});
-                        iteration++;
-                        $scope.$apply();
-                    }
-
-                }, function (t, e) {
-                    alert("couldn't read database (" + e.message + ")");
+                    /*
+                     console.log('check Test R1:' + JSON.stringify(results.rows.item(0)));
+                     */
                 });
+
             }
+
+        }, function errorHandler(transaction, error) {
+            console.log("Error : " + transaction.message);
+            console.log("Error : " + error.message);
+        }, function () {
+            var timeEnd = new Date().getTime();
+
+            var timeDiff = timeEnd - timeStart;
+            $scope.results.push({iteration: iteration, time: timeDiff});
+            $scope.testInProgress = false;
+            iteration++;
+            $scope.$apply();
 
         });
 

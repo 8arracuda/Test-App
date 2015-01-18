@@ -51,28 +51,19 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
         console.log('selectedTestVariant= ' + $scope.selectedTestVariant + ' (amountOfData= ' + amountOfData + ')');
 
     };
-
-    function clearTable() {
+    function clearTable(callback) {
 
         $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerSQLitePlugin);
-        });
+            tx.executeSql("DELETE FROM " + tableName, [], $scope.errorHandlerWebSQL);
+        }, $scope.errorHandlerWebSQL, callback);
 
-        function clearedTableCallback(transaction, results) {
-            console.log('Table ' + tableName + ' has been cleared');
-            $scope.isPrepared = true;
-            $scope.$apply();
+    }
 
-        }
-    };
-
-    $scope.initSQLitePlugin = function () {
-        console.log('initSQLitePlugin start');
+    $scope.initWebSQL = function () {
+        console.log('initWebSQL start');
         $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        //$scope.db.transaction($scope.setupSQLitePlugin, $scope.errorHandlerSQLitePlugin, $scope.dbReadySQLitePlugin);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerSQLitePlugin);
-        //TODO rename all CreateTableEinzelwerte / CreateTableMediendaten method names to createTable!
-        console.log('initSQLitePlugin executed');
+        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
+        console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
@@ -84,31 +75,25 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
         console.log('createTable executed');
     };
 
-    $scope.errorHandlerSQLitePlugin = function (e) {
-        console.log('errorHandlerSQLitePlugin start');
-        alert(e.message);
-        console.log(e.message);
-        console.log('errorHandlerSQLitePlugin executed');
+    $scope.errorHandlerWebSQL = function (e) {
+        console.log('errorHandlerWebSQL start');
+        console.log(console.dir(e));
+        console.log('errorHandlerWebSQL executed');
     };
 
-    //$scope.prepare = function () {
-    //    clearTable();
-    //
-    //};
+    function saveAddressData(callback) {
 
-    function saveAddressData() {
+
         $scope.db.transaction(function (tx) {
-                for (var i = 0; i < dataForPreparation.length; i++) {
 
-                    //data[i][0] + '' because otherwise id's like 1.0, 2.0 are stored
-                    tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
-
-                }
-            }, function errorHandler(transaction, error) {
-                console.log("Error : " + transaction.message);
-                //console.log("Error : " + error.message);
+            for (var i = 0; i < dataForPreparation.length; i++) {
+                tx.executeSql("INSERT INTO " + tableName + "(id, address) VALUES(?,?)", [dataForPreparation[i][0] + '', JSON.stringify(dataForPreparation[i])]);
             }
-        );
+
+        }, function errorHandler(transaction, error) {
+            alert("Error : " + transaction.message);
+            alert("Error : " + error.message);
+        }, callback);
 
     }
 
@@ -116,52 +101,46 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
 
         $scope.testInProgress = true;
 
-        onSuccessCounter = 0;
         var timeStart = new Date().getTime();
         $scope.db.transaction(function (tx) {
                 for (var i = 0; i < amountOfData; i++) {
 
-                    tx.executeSql("UPDATE " + tableName + " SET address = ? WHERE id = ?", [JSON.stringify(dataForUpdate[i]), dataForUpdate[i][0] + '']);
-
-                    onSuccessCounter = onSuccessCounter + 1;
-
-                    if (onSuccessCounter == amountOfData) {
-                        var timeEnd = new Date().getTime();
-
-                        var timeDiff = timeEnd - timeStart;
-                        $scope.results.push({iteration:  iteration,  time: timeDiff});
-                        $scope.testInProgress = false;
-                        $scope.isPrepared = false;
-                        iteration++;
-                        $scope.$apply();
-                    }
+                    tx.executeSql("UPDATE PE_TestU1 SET address = ? WHERE id = ?", [JSON.stringify(dataForUpdate[i]), dataForUpdate[i][0] + '']);
 
                 }
             }, function errorHandler(transaction, error) {
                 console.log("Error : " + transaction.message);
                 console.log("Error : " + error.message);
+            }, function() {
+                var timeEnd = new Date().getTime();
+
+                var timeDiff = timeEnd - timeStart;
+                $scope.results.push({iteration:  iteration,  time: timeDiff});
+                $scope.testInProgress = false;
+                $scope.isPrepared = false;
+                iteration++;
+                $scope.$apply();
+
             }
         );
 
-
-
-        console.log(amountOfData + ' items updated');
-
     };
-
 
     $scope.prepare = function () {
         $scope.prepareInProgress=true;
         $scope.$apply();
-        clearTable();
-        loadDataForPreparation();
-        console.dir(dataForPreparation);
-        saveAddressData();
-        loadDataForUpdate();
-        $scope.prepareInProgress=false;
-        $scope.isPrepared = true;
-        console.log('prepare function finished');
-        $scope.$apply();
+        clearTable(function() {
+            loadDataForPreparation();
+            saveAddressData(function() {
+                loadDataForUpdate();
+                $scope.prepareInProgress=false;
+                $scope.isPrepared = true;
+                console.log('prepare function finished');
+                $scope.$apply();
+            });
+
+        });
+
     };
 
     function loadDataForPreparation() {
@@ -173,6 +152,5 @@ sdApp.controller('PE_SQLitePlugin_TestU1Ctrl', function ($scope, $rootScope, tes
     function loadDataForUpdate() {
         dataForUpdate = testDataFactory.testDataForUpdateTests();
     }
-
 
 });

@@ -9,14 +9,13 @@ sdApp.controller('PE_SessionStorage_TestR3Ctrl', function ($scope, $rootScope, t
 
     $scope.isPrepared = false;
 
-    var amountOfData_testR3a = PE_ParameterFactory.amountOfData_testR3a;
     var amountOfData = PE_ParameterFactory.amountOfData_testR3a;
 
     $scope.selectedTestVariant = 'TestR3a';
     $scope.preparationText = 'Prepare will clear all data stored in sessionStorage. After that it saves the data needed for the test.';
     $scope.mainTestDecription = 'Read test - random addresses will be loaded';
     $scope.testName1 = 'Test R3-6';
-    $scope.testDecription1 = 'Stores ' + amountOfData_testR3a + ' items';
+    $scope.testDecription1 = 'Stores ' + $scope.amountOfData + ' items (On this test no selection is available, because only the big variant does not work in WebStorage because of the storage limitation)';
 
     $scope.reset = function () {
 
@@ -55,6 +54,7 @@ sdApp.controller('PE_SessionStorage_TestR3Ctrl', function ($scope, $rootScope, t
     };
 
     function saveAddressData() {
+
         for (var i = 0; i < amountOfData; i++) {
             var datasetString = testDataFactory.getDatasetWithOffset(i);
             try {
@@ -83,5 +83,6 @@ sdApp.controller('PE_SessionStorage_TestR3Ctrl', function ($scope, $rootScope, t
         $scope.$apply();
 
     };
+
 
 });

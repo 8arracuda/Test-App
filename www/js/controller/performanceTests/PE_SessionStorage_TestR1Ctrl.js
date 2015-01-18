@@ -21,8 +21,6 @@ sdApp.controller('PE_SessionStorage_TestR1Ctrl', function ($scope, $rootScope, t
     $scope.testName2 = 'TestR1-2000';
     $scope.testDecription2 = 'Stores ' + amountOfData_testR1b + ' items';
 
-
-
     $scope.selectTestVariant = function (testVariant) {
         $scope.selectedTestVariant = testVariant;
 
@@ -45,35 +43,29 @@ sdApp.controller('PE_SessionStorage_TestR1Ctrl', function ($scope, $rootScope, t
             $scope.results = [];
             $scope.selectedTestVariant = '';
         }
-
     };
+
 
     $scope.startPerformanceTest = function () {
         $scope.testInProgress = true;
         $scope.$apply();
 
-        var addressIdsToLoad = testDataFactory.getRandomIndices();
-        if (addressIdsToLoad.length<amountOfData) {
-            alert('Warning: Too few address Ids defined. The test will produce wrong results!');
-        }
-
         var timeStart = new Date().getTime();
         for (var i = 0; i < amountOfData; i++) {
 
-            sessionStorage.getItem(addressIdsToLoad[i]);
-
+            sessionStorage.getItem(i);
 
             //---Test-Output to check the returned values---
             /*
-                console.log('check Test R1:' + sessionStorage.getItem(addressIdsToLoad[i]));
-            */
+             console.log('check Test R1:' + sessionStorage.getItem(i));
+             */
 
         }
 
         var timeEnd = new Date().getTime();
 
         var timeDiff = timeEnd - timeStart;
-        $scope.results.push({iteration:  iteration,  time: timeDiff});
+        $scope.results.push({iteration: iteration, time: timeDiff});
         $scope.testInProgress = false;
         $scope.$apply();
 
@@ -95,8 +87,6 @@ sdApp.controller('PE_SessionStorage_TestR1Ctrl', function ($scope, $rootScope, t
 
             for (var i = 0; i < dataForPreparation.length; i++) {
 
-                //Set the Id as key
-                //Address with key 42 is saved with key -address42-
                 sessionStorage.setItem(dataForPreparation[i][0], JSON.stringify(dataForPreparation[i]));
 
             }
@@ -115,16 +105,15 @@ sdApp.controller('PE_SessionStorage_TestR1Ctrl', function ($scope, $rootScope, t
 
     $scope.prepare = function () {
 
-        $scope.prepareInProgress=true;
+        $scope.prepareInProgress = true;
         $scope.$apply();
         clearSessionStorage();
         loadDataForPreparation();
         saveAddressData();
-        $scope.prepareInProgress=false;
+        $scope.prepareInProgress = false;
         $scope.isPrepared = true;
         console.log('prepare function finished');
         $scope.$apply();
 
     };
-
 });

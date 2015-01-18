@@ -40,13 +40,13 @@ var app = {
 //TODO For debugging in Chrome (remove at the end)
 userAgentForDesktopDevelopment1 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36';
 userAgentForDesktopDevelopment2 = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.1.25 (KHTML, like Gecko) Version/8.0 Safari/600.1.25';
-if (navigator.userAgent==userAgentForDesktopDevelopment1 || navigator.userAgent==userAgentForDesktopDevelopment2) {
+//if (navigator.userAgent==userAgentForDesktopDevelopment1 || navigator.userAgent==userAgentForDesktopDevelopment2) {
     setTimeout(function () {
         var htmlElement = document.getElementsByTagName("html")[0];
         angular.bootstrap(htmlElement, ['sdApp']);
     }, 2000);
 
-}
+//}
 
 var sdApp = angular.module('sdApp', ["ngRoute", "mobile-angular-ui", "TestHelperFactory", "techSupportFactory", "IndexedDBClearObjectStore", "FileApiDeleteAllFilesFactory", "testDataFactory", "PE_ParameterFactory", "ngAnimate"]);
 

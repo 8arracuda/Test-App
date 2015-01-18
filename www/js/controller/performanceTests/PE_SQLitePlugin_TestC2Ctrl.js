@@ -52,7 +52,7 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
     function clearTable() {
 
         $scope.db.transaction(function (tx) {
-            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerSQLitePlugin);
+            tx.executeSql("DELETE FROM " + tableName, [], clearedTableCallback, $scope.errorHandlerWebSQL);
         });
 
         function clearedTableCallback(transaction, results) {
@@ -62,7 +62,7 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
 
         }
 
-    };
+    }
 
     function loadDataForPreparation() {
 
@@ -85,7 +85,6 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
     $scope.startPerformanceTest = function () {
 
         $scope.testInProgress = true;
-
 
         var timeStart = new Date().getTime();
         $scope.db.transaction(function (tx) {
@@ -112,15 +111,13 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
             }
         );
 
-
-
     };
 
-    $scope.initSQLitePlugin = function () {
-        console.log('initSQLitePlugin start');
+    $scope.initWebSQL = function () {
+        console.log('initWebSQL start');
         $scope.db = sqlitePlugin.openDatabase(dbName, dbVersion, dbName, 2 * 1024 * 1024);
-        $scope.db.transaction($scope.createTable, $scope.errorHandlerSQLitePlugin);
-        console.log('initSQLitePlugin executed');
+        $scope.db.transaction($scope.createTable, $scope.errorHandlerWebSQL);
+        console.log('initWebSQL executed');
         $scope.databaseOpened = true;
     };
 
@@ -130,11 +127,11 @@ sdApp.controller('PE_SQLitePlugin_TestC2Ctrl', function ($scope, $rootScope, tes
 
     };
 
-    $scope.errorHandlerSQLitePlugin = function (e) {
-        console.log('errorHandlerSQLitePlugin start');
+    $scope.errorHandlerWebSQL = function (e) {
+        console.log('errorHandlerWebSQL start');
         alert(e.message);
         console.log(e.message);
-        console.log('errorHandlerSQLitePlugin executed');
+        console.log('errorHandlerWebSQL executed');
     };
 
 });

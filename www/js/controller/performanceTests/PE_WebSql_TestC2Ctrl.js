@@ -62,7 +62,7 @@ sdApp.controller('PE_WebSql_TestC2Ctrl', function ($scope, $rootScope, testDataF
 
         }
 
-    };
+    }
 
     function loadDataForPreparation() {
 
